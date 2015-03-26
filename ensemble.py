@@ -29,10 +29,14 @@ from collections import Counter
 
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.utils import check_random_state
-from sklearn.metrics import f1_score, roc_auc_score
+from sklearn.metrics import f1_score, roc_auc_score, log_loss
 from sklearn.metrics import mean_squared_error, accuracy_score
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.preprocessing import LabelBinarizer
+
+def _log_loss(y, y_bin, probs):
+    """return 1-log_loss since we're maximizing the score for hillclimbing"""
+    return 1.0 - log_loss(y, probs)
 
 
 def _f1(y, y_bin, probs):
@@ -138,6 +142,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
     """
 
     _metrics = {
+        'log_loss': _log_loss,           
         'f1': _f1,
         'auc': _auc,
         'rmse': _rmse,
