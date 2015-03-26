@@ -31,12 +31,13 @@ def build_models(model_class, param_grid):
 
 def build_randomForestClassifiers(random_state=None):
     param_grid = {
-        'n_estimators': [20, 50, 100],
+        'n_estimators': [20, 50, 100, 200, 500],
         'criterion':  ['gini', 'entropy'],
         'max_features': [None, 'auto', 'sqrt', 'log2'],
-        'max_depth': [1, 2, 5, 10],
-        'min_density': [0.25, 0.5, 0.75, 1.0],
+        'max_depth': [1, 2, 4, 7, 10],
+        #'min_density': [0.25, 0.5, 0.75, 1.0],
         'random_state': [random_state],
+        'n_jobs': [6],
     }
 
     return build_models(RandomForestClassifier, param_grid)
