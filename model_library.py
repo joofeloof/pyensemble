@@ -10,15 +10,20 @@ import numpy as np
 
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.utils import check_random_state
 from sklearn.cluster import KMeans
 from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import ParameterGrid
 from sklearn.linear_model import SGDClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.kernel_approximation import Nystroem
 
 
@@ -37,11 +42,23 @@ def build_randomForestClassifiers(random_state=None):
         'max_depth': [1, 2, 4, 7, 10],
         #'min_density': [0.25, 0.5, 0.75, 1.0],
         'random_state': [random_state],
-        'n_jobs': [6],
+        'n_jobs': [-1],
     }
 
     return build_models(RandomForestClassifier, param_grid)
 
+def build_randomForestRegressors(random_state=None):
+    param_grid = {
+        'n_estimators': [20, 50, 100, 200, 500],
+        'criterion':  ['mse'],
+        'max_features': [None, 'auto', 'sqrt', 'log2'],
+        'max_depth': [1, 2, 4, 7, 10],
+        #'min_density': [0.25, 0.5, 0.75, 1.0],
+        'random_state': [random_state],
+        'n_jobs': [-1],
+    }
+
+    return build_models(RandomForestRegressor, param_grid)
 
 def build_gradientBoostingClassifiers(random_state=None):
     param_grid = {
@@ -53,6 +70,15 @@ def build_gradientBoostingClassifiers(random_state=None):
 
     return build_models(GradientBoostingClassifier, param_grid)
 
+def build_gradientBoostingRegressors(random_state=None):
+    param_grid = {
+        'max_depth': [1, 2, 5, 10],
+        'n_estimators': [10, 20, 50, 100],
+        'subsample': np.linspace(0.2, 1.0, 5),
+        'max_features': np.linspace(0.2, 1.0, 5),
+    }
+
+    return build_models(GradientBoostingRegressor, param_grid)
 
 def build_sgdClassifiers(random_state=None):
     param_grid = {
@@ -81,6 +107,18 @@ def build_decisionTreeClassifiers(random_state=None):
 
     return build_models(DecisionTreeClassifier, param_grid)
 
+def build_decisionTreeRegressors(random_state=None):
+    rs = check_random_state(random_state)
+
+    param_grid = {
+        'criterion': ['mse'],
+        'max_features': [None, 'auto', 'sqrt', 'log2'],
+        'max_depth': [None, 1, 2, 5, 10],
+        'min_samples_split': [1, 2, 5, 10],
+        'random_state': [rs.random_integers(100000) for i in xrange(3)],
+    }
+
+    return build_models(DecisionTreeRegressor, param_grid)
 
 def build_extraTreesClassifiers(random_state=None):
     param_grid = {
@@ -94,6 +132,18 @@ def build_extraTreesClassifiers(random_state=None):
 
     return build_models(ExtraTreesClassifier, param_grid)
 
+def build_extraTreesRegressors(random_state=None):
+    param_grid = {
+        'criterion': ['mse'],
+        'n_estimators': [5, 10, 20],
+        'max_features': [None, 'auto', 'sqrt', 'log2'],
+        'max_depth': [None, 1, 2, 5, 10],
+        'min_samples_split': [2, 5, 10],
+        'random_state': [random_state],
+        'n_jobs': [-1]
+    }
+
+    return build_models(ExtraTreesRegressor, param_grid)
 
 def build_svcs(random_state=None):
     print('Building SVM models')
