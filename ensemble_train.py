@@ -12,17 +12,21 @@ Caruana-style ensemble selection.
 
 The user can choose from the following candidate models:
 
-    sgd     : Stochastic Gradient Descent
-    svc     : Support Vector Machines
-    gbc     : Gradient Boosting Classifiers
-    dtree   : Decision Trees
-    forest  : Random Forests
-    extra   : Extra Trees
-    kmp     : KMeans->LogisticRegression Pipelines
-    kern    : Nystroem->LogisticRegression Pipelines
+    sgd         : Stochastic Gradient Descent
+    svc         : Support Vector Machines
+    gbc         : Gradient Boosting Classifiers
+    dtree       : Decision Tree Classifiers
+    forest      : Random Forest Classifiers
+    extra       : Extra Tree Classifiers
+    kmp         : KMeans->LogisticRegression Pipelines
+    kern        : Nystroem->LogisticRegression Pipelines
+    gb_reg      : Gradient Boosting Regressors
+    dtree_reg   : Decision Tree Regressors
+    forest_reg  : Random Forest Regressors
+    extra_reg   : Extra Tree Regressors
 
 usage: ensemble_train.py [-h]
-                         [-M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp}
+                         [-M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp...}
                             [{svc,sgd,gbc,dtree,forest,extra,kmp,kernp} ...]]
                          [-S {f1,auc,rmse,accuracy,xentropy}] [-b N_BAGS]
                          [-f BAG_FRACTION] [-B N_BEST] [-m MAX_MODELS]
@@ -30,7 +34,7 @@ usage: ensemble_train.py [-h]
                          [-e EPSILON] [-t TEST_SIZE] [-s SEED] [-v]
                          db_file data_file
 
-EnsembleSelectionClassifier training harness
+EnsembleSelectionClassifier or EnsembleSelectionRegressor training harness
 
 positional arguments:
   db_file               sqlite db file for backing store
@@ -38,11 +42,13 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp}
+  -T --type {'regression','classification'
+                        type of method to implement (regression or classification)
+  -M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp,gb_reg,dtree_reg,forest_reg,extra_reg}
     [{svc,sgd,gbc,dtree,forest,extra,kmp,kernp} ...]
                         model types to include as ensemble candidates
                         (default: ['dtree'])
-  -S {f1,auc,rmse,accuracy,xentropy}
+  -S {f1,auc,rmse,accuracy,xentropy,explained_uniform_variance,explained_weighted_variance,r2}
                         scoring metric used for hillclimbing (default:
                         accuracy)
   -b N_BAGS             bags to create (default: 20)
@@ -78,7 +84,6 @@ from model_library import build_model_library
 
 
 def parse_args():
-    # todo --> need to get method (meth='Regression' or meth='Classification' as this is forms decision for code branch...
 
     desc = 'EnsembleSelection training harness'
     parser = ArgumentParser(description=desc)
@@ -97,12 +102,16 @@ def parse_args():
                         choices=model_choices,
                         help=help_fmt, default=['dtree'])
 
-    #todo--> add scoring choices for regression
+    method_choices = ['Regression', 'Classification']
+
+    help_fmt = 'method of estimation %s' % dflt_fmt
+    parser.add_argument('-T', dest='meth', nargs='+', choices=method_choices, help=help_fmt, default=['Classification'])
 
     help_fmt = 'scoring metric used for hillclimbing %s' % dflt_fmt
     parser.add_argument('-S', dest='score_metric',
-                        choices=['f1', 'auc', 'rmse', 'accuracy', 'xentropy'],
-                        help=help_fmt,  default='accuracy')
+                        choices=['f1', 'auc', 'rmse', 'accuracy', 'xentropy', 'explained_uniform_variance',
+                                 'explained_weighted_variance', 'r2'],
+                        help=help_fmt, default='accuracy')
 
     parser.add_argument('-b', dest='n_bags', type=int,
                         help='bags to create (default: %(default)s)',
@@ -196,9 +205,9 @@ if (__name__ == '__main__'):
     }
 
     try:
-        if meth == 'Classifier':
+        if res.meth == 'Classifier':
             ens = EnsembleSelectionClassifier(**param_dict)
-        elif meth == 'Regression':
+        elif res.meth == 'Regression':
             ens = EnsembleSelectionRegressor(**param_dict)
     except ValueError as e:
         print('ERROR: %s' % e)

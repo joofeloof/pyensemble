@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble.py" afterPath="$PROJECT_DIR$/ensemble.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_train.py" afterPath="$PROJECT_DIR$/ensemble_train.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model_library.py" afterPath="$PROJECT_DIR$/model_library.py" />
     </list>
     <ignored path="pyensemble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,34 +37,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="763" column="26" selection-start-line="763" selection-start-column="26" selection-end-line="763" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.5179543">
+              <caret line="766" column="17" selection-start-line="766" selection-start-column="17" selection-end-line="766" selection-end-column="17" />
               <folding>
                 <element signature="e#706#715#0" expanded="true" />
-                <element signature="e#3058#23868#0" expanded="false" />
-                <element signature="e#3058#5380#1" expanded="false" />
-                <element signature="e#23940#26261#1" expanded="false" />
+                <element signature="e#3059#23869#0" expanded="false" />
+                <element signature="e#3059#5381#1" expanded="false" />
+                <element signature="e#23941#26262#1" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45375407">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.911765">
+              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
               <folding>
-                <element signature="e#2872#2909#0" expanded="true" />
+                <element signature="e#3365#3402#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -78,9 +84,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ensemble.py" />
         <option value="$PROJECT_DIR$/model_library.py" />
+        <option value="$PROJECT_DIR$/pd_to_svmlight.py" />
         <option value="$PROJECT_DIR$/ensemble_train.py" />
+        <option value="$PROJECT_DIR$/ensemble.py" />
       </list>
     </option>
   </component>
@@ -285,12 +292,18 @@
       <option name="project" value="LOCAL" />
       <updated>1450714752082</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding regressor class">
+      <created>1450720481681</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1450720481681</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -316,9 +329,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding regressor class" />
     <MESSAGE value="Adding regression scoring functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding regression scoring functions" />
+    <MESSAGE value="adding regressor class" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding regressor class" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -328,19 +341,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ensemble.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="763" column="26" selection-start-line="763" selection-start-column="26" selection-end-line="763" selection-end-column="26" />
-          <folding>
-            <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#3058#23868#0" expanded="false" />
-            <element signature="e#3058#5380#1" expanded="false" />
-            <element signature="e#23940#26261#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.529411">
@@ -353,10 +353,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45375407">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.911765">
+          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
           <folding>
-            <element signature="e#2872#2909#0" expanded="true" />
+            <element signature="e#3365#3402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5179543">
+          <caret line="766" column="17" selection-start-line="766" selection-start-column="17" selection-end-line="766" selection-end-column="17" />
+          <folding>
+            <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3059#23869#0" expanded="false" />
+            <element signature="e#3059#5381#1" expanded="false" />
+            <element signature="e#23941#26262#1" expanded="false" />
           </folding>
         </state>
       </provider>

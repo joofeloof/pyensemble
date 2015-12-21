@@ -762,9 +762,9 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
     _metrics = {
         'explained_uniform_variance': _explained_variance_score_uniform,
-        'explained_weighted_variance': _explained_variance_score_weighted
+        'explained_weighted_variance': _explained_variance_score_weighted,
         'rmse': _rmse,
-        'r2': _rsq
+        'r2': _r2
     }
 
     def __init__(self, db_file=None,
