@@ -31,6 +31,7 @@ from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
 from sklearn.utils import check_random_state
 from sklearn.metrics import f1_score, roc_auc_score, log_loss
 from sklearn.metrics import mean_squared_error, accuracy_score
+from sklearn.metrics import explained_variance_score, r2_score
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.preprocessing import LabelBinarizer
 
@@ -38,6 +39,13 @@ def _log_loss(y, y_bin, probs):
     """return 1-log_loss since we're maximizing the score for hillclimbing"""
     return 1.0 - log_loss(y, probs)
 
+
+def _explained_variance_score(y, probs, meth='Regression'):
+    return explained_variance_score(y, probs)
+
+
+def _r2(y, probs, meth='Regression'):
+    return r2_score(y, probs)
 
 def _f1(y, y_bin, probs):
     """return f1 score"""
@@ -49,9 +57,12 @@ def _auc(y, y_bin, probs):
     return roc_auc_score(y, probs[:, 1])
 
 
-def _rmse(y, y_bin, probs):
+def _rmse(y, y_bin, probs, meth='Classification'):
     """return 1-rmse since we're maximizing the score for hillclimbing"""
-    return 1.0 - sqrt(mean_squared_error(y_bin, probs))
+    if meth == 'Classification':
+        return 1.0 - sqrt(mean_squared_error(y_bin, probs))
+    elif meth == 'Regression':
+        return 1.0 - sqrt(mean_squared_error(y, probs))
 
 
 def _accuracy(y, y_bin, probs):
@@ -691,7 +702,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         Name of file for sqlite db backing store.
 
     `models` : list or None
-        List of classifiers following sklearn fit/predict API, if None
+        List of regressors following sklearn fit/predict API, if None
         fitted models are loaded from the specified database.
 
     `n_best` : int (default: 5)
@@ -747,8 +758,9 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
     """
 
     _metrics = {
-        'log_loss': _log_loss,
-        'rmse': _rmse
+        'explainedvariance': _explained_variance_score,
+        'rmse': _rmse,
+        'r2': _rsq
     }
 
     def __init__(self, db_file=None,
@@ -987,9 +999,9 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                 res = curs.fetchone()
                 model = loads(str(res[0]))
 
-                probs[test_inds] = model.predict_proba(X[test_inds])
+                probs[test_inds] = model.predict(X[test_inds])
 
-            score = self._metric(y, y_bin, probs)
+            score = self._metric(y, y_bin, probs, meth='Regression')
 
             # save score and probs array
             with db_conn:
@@ -1032,7 +1044,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
         ensemble_probs /= n_models
 
-        score = self._metric(y, y_bin, ensemble_probs)
+        score = self._metric(y, y_bin, ensemble_probs, meth='Regression')
         return score, ensemble_probs
 
     def _score_with_model(self, db_conn, y, y_bin, probs, n_models, model_idx):
@@ -1050,7 +1062,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         new_probs = loads(str(row[0]))
         new_probs = (probs * n_models + new_probs) / (n_models + 1.0)
 
-        score = self._metric(y, y_bin, new_probs)
+        score = self._metric(y, y_bin, new_probs, meth='Regression')
         return score, new_probs
 
     def _ensemble_from_candidates(self, db_conn, candidates, y, y_bin):
