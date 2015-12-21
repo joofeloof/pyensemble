@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="cleanup.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble.py" afterPath="$PROJECT_DIR$/ensemble.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_train.py" afterPath="$PROJECT_DIR$/ensemble_train.py" />
     </list>
     <ignored path="pyensemble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +40,12 @@
       <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="667" column="24" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
+            <state vertical-scroll-proportion="-12.176471">
+              <caret line="777" column="66" selection-start-line="777" selection-start-column="66" selection-end-line="777" selection-end-column="66" />
               <folding>
                 <element signature="e#706#715#0" expanded="true" />
-                <element signature="e#23941#26262#1" expanded="false" />
+                <element signature="e#3059#23910#0" expanded="false" />
+                <element signature="e#23982#26303#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,8 +54,8 @@
       <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ensemble_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43918192">
-              <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.84470093">
+              <caret line="210" column="23" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
               <folding>
                 <element signature="e#3365#3402#0" expanded="true" />
               </folding>
@@ -88,10 +91,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="24" />
+    <option name="x" value="1919" />
     <option name="width" value="1922" />
-    <option name="height" value="1057" />
+    <option name="height" value="1081" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -313,17 +315,24 @@
       <option name="project" value="LOCAL" />
       <updated>1450726165930</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="cleanup.">
+      <created>1450731111586</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1450731111586</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1922" height="1057" extended-state="6" />
-    <editor active="false" />
+    <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -334,7 +343,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -374,7 +382,8 @@
           <caret line="667" column="24" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#23941#26262#1" expanded="false" />
+            <element signature="e#3059#23910#0" expanded="false" />
+            <element signature="e#23982#26303#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -389,17 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="667" column="24" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
-          <folding>
-            <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#23941#26262#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -410,10 +408,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.176471">
+          <caret line="777" column="66" selection-start-line="777" selection-start-column="66" selection-end-line="777" selection-end-column="66" />
+          <folding>
+            <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3059#23910#0" expanded="false" />
+            <element signature="e#23982#26303#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43918192">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.84470093">
+          <caret line="210" column="23" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>

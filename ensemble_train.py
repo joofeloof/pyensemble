@@ -42,7 +42,7 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -T --type {'regression','classification'
+  -T --type {'Regression','Classification'
                         type of method to implement (regression or classification)
   -M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp,gb_reg,dtree_reg,forest_reg,extra_reg}
     [{svc,sgd,gbc,dtree,forest,extra,kmp,kernp} ...]
@@ -160,7 +160,7 @@ def parse_args():
     parser.add_argument('-v', dest='verbose', action='store_true',
                         help='show progress messages', default=False)
 
-
+    return parser.parse_args()
 
 if (__name__ == '__main__'):
     res = parse_args()
@@ -201,19 +201,20 @@ if (__name__ == '__main__'):
         'use_bootstrap': res.use_bootstrap,
         'max_models': res.max_models,
         'random_state': res.seed,
+        'meth': res.meth,
     }
-
+    print(str(res.meth))
     try:
-        if res.meth == 'Classifier':
+        if res.meth[0] == 'Classifier':
             ens = EnsembleSelectionClassifier(**param_dict)
-        elif res.meth == 'Regression':
+            print('fitting ensemble:\n%s\n' % ens)
+        elif res.meth[0] == 'Regression':
             ens = EnsembleSelectionRegressor(**param_dict)
+            print('fitting ensemble:\n%s\n' % ens)
     except ValueError as e:
         print('ERROR: %s' % e)
         import sys
         sys.exit(1)
-
-    print('fitting ensemble:\n%s\n' % ens)
 
     # fit models, score, build ensemble
     ens.fit(X_train, y_train)

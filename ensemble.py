@@ -171,7 +171,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
                  score_metric='accuracy',
                  epsilon=0.01, max_models=50,
                  use_epsilon=False, use_bootstrap=False,
-                 verbose=False, random_state=None):
+                 verbose=False, random_state=None, meth='Classifier'):
 
         self.db_file = db_file
         self.models = models
@@ -187,6 +187,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
         self.use_bootstrap = use_bootstrap
         self.verbose = verbose
         self.random_state = random_state
+        self.meth = meth
 
         self._check_params()
 
@@ -774,7 +775,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                  score_metric='accuracy',
                  epsilon=0.01, max_models=50,
                  use_epsilon=False, use_bootstrap=False,
-                 verbose=False, random_state=None):
+                 verbose=False, random_state=None, meth='Regression'):
 
         self.db_file = db_file
         self.models = models
@@ -790,6 +791,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         self.use_bootstrap = use_bootstrap
         self.verbose = verbose
         self.random_state = random_state
+        self.meth = meth
 
         self._check_params()
 
@@ -1005,7 +1007,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
                 probs[test_inds] = model.predict(X[test_inds])
 
-            score = self._metric(y, y_bin, probs, meth='Regression')
+            score = self._metric(y, y_bin, probs, self.meth)
 
             # save score and probs array
             with db_conn:
@@ -1048,7 +1050,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
         ensemble_probs /= n_models
 
-        score = self._metric(y, y_bin, ensemble_probs, meth='Regression')
+        score = self._metric(y, y_bin, ensemble_probs, self.meth)
         return score, ensemble_probs
 
     def _score_with_model(self, db_conn, y, y_bin, probs, n_models, model_idx):
@@ -1066,7 +1068,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         new_probs = loads(str(row[0]))
         new_probs = (probs * n_models + new_probs) / (n_models + 1.0)
 
-        score = self._metric(y, y_bin, new_probs, meth='Regression')
+        score = self._metric(y, y_bin, new_probs, self.meth)
         return score, new_probs
 
     def _ensemble_from_candidates(self, db_conn, candidates, y, y_bin):
