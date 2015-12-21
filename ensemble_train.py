@@ -163,6 +163,7 @@ def parse_args():
     return parser.parse_args()
 
 
+
 if (__name__ == '__main__'):
     res = parse_args()
 
@@ -220,7 +221,10 @@ if (__name__ == '__main__'):
     ens.fit(X_train, y_train)
 
     preds = ens.best_model_predict(X_train)
-    score = accuracy_score(y_train, preds)
+    if res.meth == 'Classifier':
+        score = accuracy_score(y_train, preds)
+    elif res.meth == 'Regression:
+        score = ens._r2(y_train, preds)
     print('Train set accuracy from best model: %.5f' % score)
 
     preds = ens.predict(X_train)
@@ -229,17 +233,24 @@ if (__name__ == '__main__'):
 
     if (do_test):
         preds = ens.best_model_predict(X_test)
-        score = accuracy_score(y_test, preds)
+        if res.meth == 'Classifier':
+            score = accuracy_score(y_test, preds)
+            fmt = '\n Test set classification report for best model:\n%s'
+            report = classification_report(y_test, preds)
+            print(fmt % report)
+        elif res.meth == 'Regression':
+            score = ens._r2(y_test, preds)
         print('\n Test set accuracy from best model: %.5f' % score)
 
-        fmt = '\n Test set classification report for best model:\n%s'
-        report = classification_report(y_test, preds)
-        print(fmt % report)
-
         preds = ens.predict(X_test)
-        score = accuracy_score(y_test, preds)
+
+        if res.meth == 'Classifier':
+            score = accuracy_score(y_test, preds)
+        elif res.meth == 'Regression':
+            score = ens._r2(y_test, preds)
         print(' Test set accuracy from final ensemble: %.5f' % score)
 
-        fmt = '\n Test set classification report for final ensemble:\n%s'
-        report = classification_report(y_test, preds)
-        print(fmt % report)
+        if res.meth == 'Classifier':
+            fmt = '\n Test set classification report for final ensemble:\n%s'
+            report = classification_report(y_test, preds)
+            print(fmt % report)
