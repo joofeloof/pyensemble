@@ -563,6 +563,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
         _, best_model = self._get_best_model(curs)
         sys.stderr.write('Best model: %s\n\n' % repr(best_model))
 
+    # todo--> refactor for regression!
     def build_ensemble(self, X, y, rescore=True):
         """Generate bagged ensemble"""
 
