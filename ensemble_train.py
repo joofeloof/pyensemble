@@ -73,12 +73,14 @@ from sklearn.metrics import classification_report
 from sklearn.datasets import load_svmlight_file
 from sklearn.cross_validation import train_test_split
 
-from ensemble import EnsembleSelectionClassifier
+from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor
 from model_library import build_model_library
 
 
 def parse_args():
-    desc = 'EnsembleSelectionClassifier training harness'
+    # todo --> need to get method (meth='Regression' or meth='Classification' as this is forms decision for code branch...
+
+    desc = 'EnsembleSelection training harness'
     parser = ArgumentParser(description=desc)
 
     dflt_fmt = '(default: %(default)s)'
@@ -87,11 +89,15 @@ def parse_args():
     parser.add_argument('data_file', help='training data in svm format')
 
     model_choices = ['svc', 'sgd', 'gbc', 'dtree',
-                     'forest', 'extra', 'kmp', 'kernp']
+                     'forest', 'extra', 'kmp', 'kernp',
+                     'gb_reg', 'dtree_reg', 'forest_reg',
+                     'extra_reg']
     help_fmt = 'model types to include as ensemble candidates %s' % dflt_fmt
     parser.add_argument('-M', dest='model_types', nargs='+',
                         choices=model_choices,
                         help=help_fmt, default=['dtree'])
+
+    #todo--> add scoring choices for regression
 
     help_fmt = 'scoring metric used for hillclimbing %s' % dflt_fmt
     parser.add_argument('-S', dest='score_metric',
@@ -190,7 +196,10 @@ if (__name__ == '__main__'):
     }
 
     try:
-        ens = EnsembleSelectionClassifier(**param_dict)
+        if meth == 'Classifier':
+            ens = EnsembleSelectionClassifier(**param_dict)
+        elif meth == 'Regression':
+            ens = EnsembleSelectionRegressor(**param_dict)
     except ValueError as e:
         print('ERROR: %s' % e)
         import sys

@@ -40,9 +40,12 @@ def _log_loss(y, y_bin, probs):
     return 1.0 - log_loss(y, probs)
 
 
-def _explained_variance_score(y, probs, meth='Regression'):
-    return explained_variance_score(y, probs)
+def _explained_variance_score_uniform(y, probs, sample_weight='uniform_average', meth='Regression'):
+    return explained_variance_score(y, probs, sample_weight)
 
+
+def _explained_variance_score_weighted(y, probs, sample_weight='variance_weighted', meth='Regression'):
+    return explained_variance_score(y, probs, sample_weight)
 
 def _r2(y, probs, meth='Regression'):
     return r2_score(y, probs)
@@ -758,7 +761,8 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
     """
 
     _metrics = {
-        'explainedvariance': _explained_variance_score,
+        'explained_uniform_variance': _explained_variance_score_uniform,
+        'explained_weighted_variance': _explained_variance_score_weighted
         'rmse': _rmse,
         'r2': _rsq
     }

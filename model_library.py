@@ -231,6 +231,10 @@ models_dict = {
     'extra': build_extraTreesClassifiers,
     'kmp': build_kmeansPipelines,
     'kernp': build_kernPipelines,
+    'gb_reg': build_gradientBoostingRegressors,
+    'dtree_reg': build_decisionTreeRegressors,
+    'forest_reg': build_randomForestRegressors,
+    'extra_reg': build_extraTreesRegressors
 }
 
 
