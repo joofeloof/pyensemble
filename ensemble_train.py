@@ -160,8 +160,6 @@ def parse_args():
     parser.add_argument('-v', dest='verbose', action='store_true',
                         help='show progress messages', default=False)
 
-    return parser.parse_args()
-
 
 
 if (__name__ == '__main__'):
@@ -223,7 +221,7 @@ if (__name__ == '__main__'):
     preds = ens.best_model_predict(X_train)
     if res.meth == 'Classifier':
         score = accuracy_score(y_train, preds)
-    elif res.meth == 'Regression:
+    elif res.meth == 'Regression':
         score = ens._r2(y_train, preds)
     print('Train set accuracy from best model: %.5f' % score)
 
