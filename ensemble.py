@@ -926,7 +926,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
             rs = check_random_state(self.random_state)
             self._folds = [_bootstraps(n, rs) for _ in xrange(self.n_folds)]
         else:
-            self._folds = list(StratifiedKFold(y, n_folds=self.n_folds))
+            self._folds = list(KFold(y, n_folds=self.n_folds))
 
         select_stmt = "select pickled_model from models where model_idx = ?"
         insert_stmt = """insert into fitted_models
