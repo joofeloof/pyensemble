@@ -80,6 +80,7 @@ from sklearn.datasets import load_svmlight_file
 from sklearn.cross_validation import train_test_split
 
 from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor
+from sklearn.metrics import explained_variance_score, r2_score
 from model_library import build_model_library
 
 
@@ -220,36 +221,39 @@ if (__name__ == '__main__'):
     ens.fit(X_train, y_train)
 
     preds = ens.best_model_predict(X_train)
-    if res.meth == 'Classifier':
+    if res.meth[0] == 'Classifier':
         score = accuracy_score(y_train, preds)
-    elif res.meth == 'Regression':
-        score = ens._r2(y_train, preds)
+    elif res.meth[0] == 'Regression':
+        score = r2_score(y_train, preds)
     print('Train set accuracy from best model: %.5f' % score)
 
     preds = ens.predict(X_train)
-    score = accuracy_score(y_train, preds)
+    if res.meth[0] == 'Classifier':
+        score = accuracy_score(y_train, preds)
+    elif res.meth[0] == 'Regression':
+        score = r2_score(y_train, preds)
     print('Train set accuracy from final ensemble: %.5f' % score)
 
     if (do_test):
         preds = ens.best_model_predict(X_test)
-        if res.meth == 'Classifier':
+        if res.meth[0] == 'Classifier':
             score = accuracy_score(y_test, preds)
             fmt = '\n Test set classification report for best model:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
-        elif res.meth == 'Regression':
-            score = ens._r2(y_test, preds)
+        elif res.meth[0] == 'Regression':
+            score = r2_score(y_test, preds)
         print('\n Test set accuracy from best model: %.5f' % score)
 
         preds = ens.predict(X_test)
 
-        if res.meth == 'Classifier':
+        if res.meth[0] == 'Classifier':
             score = accuracy_score(y_test, preds)
-        elif res.meth == 'Regression':
-            score = ens._r2(y_test, preds)
+        elif res.meth[0] == 'Regression':
+            score = r2_score(y_test, preds)
         print(' Test set accuracy from final ensemble: %.5f' % score)
 
-        if res.meth == 'Classifier':
+        if res.meth[0] == 'Classifier':
             fmt = '\n Test set classification report for final ensemble:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
