@@ -42,7 +42,15 @@ If the object is initialized with the _model_ parameter equal to None, the objec
 a fitted ensemble from the database specified.
 
 __*(NOTE: Expects class labels to be sequential integers starting at zero [for now].)*__
-    
+
+
+
+Containing the EnsembleSelectionRegressor object
+
+The EnsembleSelectionRegressor object follows the ensembleselectionclassifier as above, except
+instead of discrete outcome choices, it leverages the regressor counterparts to generate
+continuous values.
+
 ####__model_library.py__
 
 Example model library building code.
@@ -53,16 +61,21 @@ Training utility to run ensemble selection on svm data files.
 
 The user can choose from the following candidate models:
 
-*    sgd     : Stochastic Gradient Descent
-*    svc     : Support Vector Machines
-*    gbc     : Gradient Boosting Classifiers
-*    dtree   : Decision Trees
-*    forest  : Random Forests
-*    extra   : Extra Trees
-*    kmp     : KMeans->LogisticRegression Pipelines
-*    kernp   : Nystroem Approx->Logistic Regression Pipelines
+*    sgd        : Stochastic Gradient Descent
+*    svc        : Support Vector Machines
+*    gbc        : Gradient Boosting Classifiers
+*    dtree      : Decision Trees
+*    forest     : Random Forests
+*    extra      : Extra Trees
+*    kmp        : KMeans->LogisticRegression Pipelines
+*    kernp      : Nystroem Approx->Logistic Regression Pipelines
+*    gb_reg     : Gradient Boosting Regressors
+*    dtree_reg  : Decision Tree Regressors
+*    forest_reg : Random Forest Regressors
+*    extra_reg  : Extra Tree Regressors
 
 Some model choices are __very slow__.  The default is to use decision trees, which are reasonably fast.
+--> All models (that can) are defaulted to use all available cores via n_jobs=-1 parameter
 
 The simplest command line is:
 
@@ -76,6 +89,7 @@ Full usage is:
 usage: ensemble_train.py [-h]
                          [-M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp}
                             [{svc,sgd,gbc,dtree,forest,extra,kmp,kernp} ...]]
+                         [-T {Regression,Classification}]
                          [-S {f1,auc,rmse,accuracy,xentropy}] [-b N_BAGS]
                          [-f BAG_FRACTION] [-B N_BEST] [-m MAX_MODELS]
                          [-F N_FOLDS] [-p PRUNE_FRACTION] [-u] [-U]
@@ -90,6 +104,8 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
+  -T {Regression, Classification}
+                        method of estimation to invoke
   -M {svc,sgd,gbc,dtree,forest,extra,kmp,kernp}
     [{svc,sgd,gbc,dtree,forest,extra,kmp,kernp} ...]
                         model types to include as ensemble candidates
@@ -146,7 +162,7 @@ optional arguments:
 Requirements
 ------------
 
-Written using Python 2.7.3, numpy 1.6.1, scipy 0.10.1, scikit-learn 0.14.1 and sqlite 3.7.14
+Written using Python 2.7.9, numpy 1.10.1, scipy 0.14.0, scikit-learn 0.16.1 and sqlite 3.7.14
 
 
 References
