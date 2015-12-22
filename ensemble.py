@@ -32,7 +32,7 @@ from sklearn.utils import check_random_state
 from sklearn.metrics import f1_score, roc_auc_score, log_loss
 from sklearn.metrics import mean_squared_error, accuracy_score
 from sklearn.metrics import explained_variance_score, r2_score
-from sklearn.cross_validation import StratifiedKFold
+from sklearn.cross_validation import StratifiedKFold, KFold
 from sklearn.preprocessing import LabelBinarizer
 
 def _log_loss(y, y_bin, probs):
@@ -739,7 +739,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
     `use_bootstrap`: boolean (default: False)
         If True, use bootstrap sample of entire dataset for fitting, and
         oob samples for hillclimbing for each internal CV fold instead
-        of StratifiedKFolds
+        of KFolds
 
     `use_epsilon` : boolean (default: False)
         If True, candidates models are added to ensembles until the value
