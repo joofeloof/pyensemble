@@ -1279,7 +1279,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
     def best_model_predict(self, X):
         """Predict outcome for samples in X using best model"""
-        return np.argmax(self.best_model_predict_proba(X), axis=1)
+        return np.argmax(self.best_model_predict_proba(X))
 
     def predict_proba(self, X):
         """Predictions"""
@@ -1294,4 +1294,4 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
     def predict(self, X):
         """Predict outcome for samples in X."""
-        return np.argmax(self.predict(X), axis=1)
+        return np.argmax(self.predict(X))
