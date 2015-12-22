@@ -194,7 +194,7 @@ if (__name__ == '__main__'):
         'n_bags': res.n_bags,
         'bag_fraction': res.bag_fraction,
         'prune_fraction': res.prune_fraction,
-        'score_metric': res.score_metric, cross
+        'score_metric': res.score_metric,
         'verbose': res.verbose,
         'epsilon': res.epsilon,
         'use_epsilon': res.use_epsilon,

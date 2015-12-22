@@ -1176,11 +1176,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         db_conn = sqlite3.connect(self.db_file)
         curs = db_conn.cursor()
 
-        # binarize
-        if (self._n_classes > 2):
-            y_bin = LabelBinarizer().fit_transform(y)
-        else:
-            y_bin = np.column_stack((1 - y, y))
+        y_bin = y
 
         # get CV scores for fitted models
         if (rescore):
@@ -1249,7 +1245,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         db_conn.close()
 
     def _model_predict_proba(self, X, model_idx=0):
-        """Get probability predictions for a model given its index"""
+        """Get average predictions for a model given its index"""
 
         db_conn = sqlite3.connect(self.db_file)
         curs = db_conn.cursor()
@@ -1257,7 +1253,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                          from fitted_models
                          where model_idx = ? and fold_idx = ?"""
 
-        # average probs over each n_folds models
+        # average predictions over each n_folds models
         probs = np.zeros((len(X), self._n_classes))
         for fold_idx in xrange(self.n_folds):
             curs.execute(select_stmt, [model_idx, fold_idx])
@@ -1265,15 +1261,14 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
             res = curs.fetchone()
             model = loads(str(res[0]))
 
-            probs += model.predict_proba(X) / float(self.n_folds)
+            probs += model.predict(X) / float(self.n_folds)
 
         db_conn.close()
 
         return probs
 
     def best_model_predict_proba(self, X):
-        """Probability estimates for all classes (ordered by class label)
-        using best model"""
+        """Predict estimates using best model"""
 
         db_conn = sqlite3.connect(self.db_file)
         best_model_idx, _ = self._get_best_model(db_conn.cursor())
@@ -1282,12 +1277,11 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         return self._model_predict_proba(X, best_model_idx)
 
     def best_model_predict(self, X):
-        """Predict class labels for samples in X using best model"""
+        """Predict outcome for samples in X using best model"""
         return np.argmax(self.best_model_predict_proba(X), axis=1)
 
     def predict_proba(self, X):
-        """Probability estimates for all classes (ordered by class label)"""
-
+        """Predictions"""
         n_models = float(sum(self._ensemble.values()))
 
         probs = np.zeros((len(X), self._n_classes))
@@ -1298,5 +1292,5 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         return probs
 
     def predict(self, X):
-        """Predict class labels for samples in X."""
+        """Predict outcome for samples in X."""
         return np.argmax(self.predict_proba(X), axis=1)

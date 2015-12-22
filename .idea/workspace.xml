@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="swapped stratified k-fold for plain kfold in regression class">
+    <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="note for build_ensemble function in regressor class...need to modify for continuous data.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble.py" afterPath="$PROJECT_DIR$/ensemble.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_train.py" afterPath="$PROJECT_DIR$/ensemble_train.py" />
     </list>
     <ignored path="pyensemble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +40,12 @@
       <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23503809">
-              <caret line="565" column="37" selection-start-line="565" selection-start-column="37" selection-end-line="565" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.62459195">
+              <caret line="1279" column="27" selection-start-line="1279" selection-start-column="27" selection-end-line="1279" selection-end-column="27" />
               <folding>
                 <element signature="e#706#715#0" expanded="true" />
-                <element signature="e#24023#26344#1" expanded="false" />
+                <element signature="e#3059#23952#0" expanded="false" />
+                <element signature="e#24024#26345#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,8 +55,10 @@
         <entry file="file://$PROJECT_DIR$/ensemble_train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-              <folding />
+              <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
+              <folding>
+                <element signature="e#3365#3402#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -329,7 +333,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450736780247</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="note for build_ensemble function in regressor class...need to modify for continuous data.">
+      <created>1450738525079</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1450738525079</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -366,7 +376,8 @@
     <MESSAGE value="cleanup." />
     <MESSAGE value="fixing errors" />
     <MESSAGE value="swapped stratified k-fold for plain kfold in regression class" />
-    <option name="LAST_COMMIT_MESSAGE" value="swapped stratified k-fold for plain kfold in regression class" />
+    <MESSAGE value="note for build_ensemble function in regressor class...need to modify for continuous data." />
+    <option name="LAST_COMMIT_MESSAGE" value="note for build_ensemble function in regressor class...need to modify for continuous data." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -392,7 +403,8 @@
           <caret line="667" column="24" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24023#26344#1" expanded="false" />
+            <element signature="e#3059#23952#0" expanded="false" />
+            <element signature="e#24024#26345#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -401,7 +413,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3365#3402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -418,18 +432,21 @@
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-          <folding />
+          <caret line="206" column="8" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="8" />
+          <folding>
+            <element signature="e#3365#3402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23503809">
-          <caret line="565" column="37" selection-start-line="565" selection-start-column="37" selection-end-line="565" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.62459195">
+          <caret line="1279" column="27" selection-start-line="1279" selection-start-column="27" selection-end-line="1279" selection-end-column="27" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24023#26344#1" expanded="false" />
+            <element signature="e#3059#23952#0" expanded="false" />
+            <element signature="e#24024#26345#1" expanded="false" />
           </folding>
         </state>
       </provider>
