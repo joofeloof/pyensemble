@@ -140,7 +140,7 @@ def build_extraTreesRegressors(random_state=None):
         'max_depth': [None, 1, 2, 5, 10],
         'min_samples_split': [2, 5, 10],
         'random_state': [random_state],
-        'n_jobs': [-1]
+        'n_jobs': [-1],
     }
 
     return build_models(ExtraTreesRegressor, param_grid)

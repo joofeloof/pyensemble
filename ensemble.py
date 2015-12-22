@@ -62,9 +62,9 @@ def _auc(y, y_bin, probs):
 
 def _rmse(y, y_bin, probs, meth='Classification'):
     """return 1-rmse since we're maximizing the score for hillclimbing"""
-    if meth == 'Classification':
+    if meth[0] == 'Classification':
         return 1.0 - sqrt(mean_squared_error(y_bin, probs))
-    elif meth == 'Regression':
+    elif meth[0] == 'Regression':
         return 1.0 - sqrt(mean_squared_error(y, probs))
 
 
@@ -995,9 +995,10 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
         curs = db_conn.cursor()
 
-        # build probs array using the test sets for each internal CV fold
+        # build prediction vector using the test sets for each internal CV fold
         for model_idx in xrange(self._n_models):
-            probs = np.zeros((len(X), self._n_classes))
+
+            probs = np.zeros((len(X)))
 
             for fold_idx, fold in enumerate(self._folds):
                 _, test_inds = fold
@@ -1008,9 +1009,9 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
                 probs[test_inds] = model.predict(X[test_inds])
 
-            score = self._metric(y, y_bin, probs, self.meth)
+            score = self._metric(y, y_bin, probs, meth=self.meth)
 
-            # save score and probs array
+            # save score and prediction vector (probs)
             with db_conn:
                 vals = (model_idx, score, buffer(dumps(probs)))
                 db_conn.execute(insert_stmt, vals)
@@ -1033,7 +1034,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         """Get score for model ensemble"""
 
         n_models = float(sum(ensemble.values()))
-        ensemble_probs = np.zeros((len(y), self._n_classes))
+        ensemble_probs = np.zeros((len(y)))  # self._n_classes))
 
         curs = db_conn.cursor()
         select_stmt = """select model_idx, probs
@@ -1051,7 +1052,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
         ensemble_probs /= n_models
 
-        score = self._metric(y, y_bin, ensemble_probs, self.meth)
+        score = self._metric(y, y_bin, ensemble_probs, meth=self.meth)
         return score, ensemble_probs
 
     def _score_with_model(self, db_conn, y, y_bin, probs, n_models, model_idx):
@@ -1069,7 +1070,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         new_probs = loads(str(row[0]))
         new_probs = (probs * n_models + new_probs) / (n_models + 1.0)
 
-        score = self._metric(y, y_bin, new_probs, self.meth)
+        score = self._metric(y, y_bin, new_probs, meth=self.meth)
         return score, new_probs
 
     def _ensemble_from_candidates(self, db_conn, candidates, y, y_bin):
@@ -1171,7 +1172,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
     def build_ensemble(self, X, y, rescore=True):
         """Generate bagged ensemble"""
 
-        self._n_classes = len(np.unique(y))
+        self._n_classes = 1  #len(np.unique(y))
 
         db_conn = sqlite3.connect(self.db_file)
         curs = db_conn.cursor()
@@ -1254,7 +1255,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                          where model_idx = ? and fold_idx = ?"""
 
         # average predictions over each n_folds models
-        probs = np.zeros((len(X), self._n_classes))
+        probs = np.zeros((len(X)))  #, self._n_classes))
         for fold_idx in xrange(self.n_folds):
             curs.execute(select_stmt, [model_idx, fold_idx])
 
@@ -1284,7 +1285,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         """Predictions"""
         n_models = float(sum(self._ensemble.values()))
 
-        probs = np.zeros((len(X), self._n_classes))
+        probs = np.zeros((len(X)))  #), self._n_classes))
 
         for model_idx, weight in self._ensemble.items():
             probs += self._model_predict_proba(X, model_idx) * weight / n_models
@@ -1293,4 +1294,4 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
     def predict(self, X):
         """Predict outcome for samples in X."""
-        return np.argmax(self.predict_proba(X), axis=1)
+        return np.argmax(self.predict(X), axis=1)
