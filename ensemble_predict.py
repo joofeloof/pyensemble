@@ -17,7 +17,7 @@ Expects to find a trained ensemble in the sqlite db specified.
 
 usage: ensemble_predict.py [-h] [-s {best,ens}] [-p] db_file data_file
 
-Get EnsembleSelectionClassifier predictions
+Get EnsembleSelectionClassifier or EnsembleSelectionRegressor predictions
 
 positional arguments:
   db_file        sqlite db file containing model
@@ -27,6 +27,8 @@ optional arguments:
   -h, --help     show this help message and exit
   -s {best,ens}  choose source of prediction ["best", "ens"]
   -p             predict probabilities
+  -T --type {'Regression','Classification'
+                 type of method to implement (regression or classification)
 """
 from __future__ import print_function
 
@@ -36,12 +38,17 @@ from argparse import ArgumentParser
 
 from sklearn.datasets import load_svmlight_file
 
-from ensemble import EnsembleSelectionClassifier
+from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor
 
 
 def parse_args():
     desc = 'Get EnsembleSelectionClassifier predictions'
     parser = ArgumentParser(description=desc)
+
+    method_choices = ['Regression', 'Classification']
+
+    help_fmt = 'method of estimation %s' % dflt_fmt
+    parser.add_argument('-T', dest='meth', nargs='+', choices=method_choices, help=help_fmt, default=['Regression'])
 
     parser.add_argument('db_file', help='sqlite db file containing model')
     parser.add_argument('data_file', help='testing data in svm format')
@@ -64,7 +71,15 @@ if (__name__ == '__main__'):
     X, _ = load_svmlight_file(res.data_file)
     X = X.toarray()
 
-    ens = EnsembleSelectionClassifier(db_file=res.db_file, models=None)
+    if res.meth[0] == 'Classification':
+        ens = EnsembleSelectionClassifier(db_file=res.db_file, models=None)
+    elif res.meth[0] == 'Regression':
+        ens = EnsembleSelectionRegressor(db_file=res.db_file, models=None)
+    else:
+        msg = "Invalid method passed (-T does not conform to ['Regression','Classification']"
+        raise ValueError(msg)
+
+
 
     if (res.pred_src == 'best'):
         preds = ens.best_model_predict_proba(X)

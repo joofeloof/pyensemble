@@ -80,8 +80,9 @@ from sklearn.datasets import load_svmlight_file
 from sklearn.cross_validation import train_test_split
 
 from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor
-from sklearn.metrics import explained_variance_score, r2_score
+from sklearn.metrics import mean_squared_error, r2_score
 from model_library import build_model_library
+from math import sqrt
 
 
 def parse_args():
@@ -106,7 +107,7 @@ def parse_args():
     method_choices = ['Regression', 'Classification']
 
     help_fmt = 'method of estimation %s' % dflt_fmt
-    parser.add_argument('-T', dest='meth', nargs='+', choices=method_choices, help=help_fmt, default=['Classification'])
+    parser.add_argument('-T', dest='meth', nargs='+', choices=method_choices, help=help_fmt, default=['Regression'])
 
     help_fmt = 'scoring metric used for hillclimbing %s' % dflt_fmt
     parser.add_argument('-S', dest='score_metric',
@@ -212,6 +213,9 @@ if (__name__ == '__main__'):
         elif res.meth[0] == 'Regression':
             ens = EnsembleSelectionRegressor(**param_dict)
             print('fitting ensemble:\n%s\n' % ens)
+        else:
+            msg = "Invalid method passed (-T does not conform to ['Regression','Classification']"
+            raise ValueError(msg)
     except ValueError as e:
         print('ERROR: %s' % e)
         import sys
@@ -225,6 +229,8 @@ if (__name__ == '__main__'):
         score = accuracy_score(y_train, preds)
     elif res.meth[0] == 'Regression':
         score = r2_score(y_train, preds)
+        rmse = sqrt(mean_squared_error(y_train, preds))
+        print('Train set RMSE from best model: %.5f' % rmse)
     print('Train set accuracy from best model: %.5f' % score)
 
     preds = ens.predict(X_train)
@@ -232,6 +238,8 @@ if (__name__ == '__main__'):
         score = accuracy_score(y_train, preds)
     elif res.meth[0] == 'Regression':
         score = r2_score(y_train, preds)
+        rmse = sqrt(mean_squared_error(y_train, preds))
+        print('Train set RMSE from final ensemble: %.5f' % rmse)
     print('Train set accuracy from final ensemble: %.5f' % score)
 
     if (do_test):
@@ -243,6 +251,8 @@ if (__name__ == '__main__'):
             print(fmt % report)
         elif res.meth[0] == 'Regression':
             score = r2_score(y_test, preds)
+            rmse = sqrt(mean_squared_error(y_test, preds))
+            print('Test set RMSE from best model: %.5f' % rmse)
         print('\n Test set accuracy from best model: %.5f' % score)
 
         preds = ens.predict(X_test)
@@ -251,6 +261,8 @@ if (__name__ == '__main__'):
             score = accuracy_score(y_test, preds)
         elif res.meth[0] == 'Regression':
             score = r2_score(y_test, preds)
+            rmse = sqrt(mean_squared_error(y_test, preds))
+        print('Test set RMSE from final ensemble: %.5f' % rmse)
         print(' Test set accuracy from final ensemble: %.5f' % score)
 
         if res.meth[0] == 'Classifier':
