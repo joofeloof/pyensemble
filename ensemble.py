@@ -773,7 +773,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                  models=None, n_best=5, n_folds=3,
                  n_bags=20, bag_fraction=0.25,
                  prune_fraction=0.8,
-                 score_metric='accuracy',
+                 score_metric='rmse',
                  epsilon=0.01, max_models=50,
                  use_epsilon=False, use_bootstrap=False,
                  verbose=False, random_state=None, meth='Regression'):
@@ -798,7 +798,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
         self._folds = None
         self._n_models = 0
-        self._n_classes = 0
+        self._n_classes = 1
         self._metric = None
         self._ensemble = Counter()
         self._model_scores = []
@@ -900,13 +900,13 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
             curs.execute("select model_idx, weight from ensemble")
             for k, v in curs.fetchall():
                 self._ensemble[k] = v
-
+            '''
             # clumsy hack to get n_classes
             curs.execute("select probs from model_scores limit 1")
             r = curs.fetchone()
             probs = loads(str(r[0]))
             self._n_classes = probs.shape[1]
-
+            '''
         db_conn.close()
 
     def fit(self, X, y):

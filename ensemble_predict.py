@@ -46,6 +46,7 @@ def parse_args():
     parser = ArgumentParser(description=desc)
 
     method_choices = ['Regression', 'Classification']
+    dflt_fmt = '(default: %(default)s)'
 
     help_fmt = 'method of estimation %s' % dflt_fmt
     parser.add_argument('-T', dest='meth', nargs='+', choices=method_choices, help=help_fmt, default=['Regression'])
@@ -65,10 +66,43 @@ def parse_args():
     return parser.parse_args()
 
 
+def predictMan(res):
+    X, _ = load_svmlight_file(res.data_file)
+    X = X.toarray()
+
+    if res.meth[0] == 'Classification':
+        ens = EnsembleSelectionClassifier(db_file=res.db_file, models=None)
+    elif res.meth[0] == 'Regression':
+        ens = EnsembleSelectionRegressor(db_file=res.db_file, models=None)
+    else:
+        msg = "Invalid method passed (-T does not conform to ['Regression','Classification']"
+        raise ValueError(msg)
+
+    if (res.pred_src == 'best'):
+        preds = ens.best_model_predict_proba(X)
+    else:
+        preds = ens.predict_proba(X)
+
+    if res.meth[0] == 'Classification':
+        if (not res.return_probs):
+            preds = np.argmax(preds, axis=1)
+
+    for p in preds:
+        if (res.return_probs):
+            mesg = " ".join(["%.5f" % v for v in p])
+        else:
+            mesg = p
+        print
+        mesg
+    return mesg
+
+
+
+
 if (__name__ == '__main__'):
     res = parse_args()
-
-    X, _ = load_svmlight_file(res.data_file)
+    predictMan(res)
+    '''X, _ = load_svmlight_file(res.data_file)
     X = X.toarray()
 
     if res.meth[0] == 'Classification':
@@ -86,8 +120,9 @@ if (__name__ == '__main__'):
     else:
         preds = ens.predict_proba(X)
 
-    if (not res.return_probs):
-        preds = np.argmax(preds, axis=1)
+    if res.meth[0] == 'Classification':
+        if (not res.return_probs):
+            preds = np.argmax(preds, axis=1)
 
     for p in preds:
         if (res.return_probs):
@@ -96,3 +131,4 @@ if (__name__ == '__main__'):
             mesg = p
 
         print(mesg)
+'''

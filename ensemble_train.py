@@ -164,9 +164,8 @@ def parse_args():
 
     return parser.parse_args()
 
-if (__name__ == '__main__'):
-    res = parse_args()
 
+def trainMan(res):
     X_train, y_train = load_svmlight_file(res.data_file)
     X_train = X_train.toarray()
 
@@ -269,3 +268,8 @@ if (__name__ == '__main__'):
             fmt = '\n Test set classification report for final ensemble:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
+    return
+
+if (__name__ == '__main__'):
+    res = parse_args()
+    trainMan(res)
