@@ -257,7 +257,12 @@ def trainMan(res):
             print('Test set RMSE from best model: %.5f' % rmse)
         print('\n Test set accuracy from best model: %.5f' % score)
         if removal == True:
-            db_cleanup(res.db_file)
+            try:
+                db_cleanup(res.db_file)
+                print("Removing unwanted models...")
+            except:
+                print("Error pruning db_file")
+                continue
 
         preds = ens.predict(X_test)
 
