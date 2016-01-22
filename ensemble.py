@@ -91,6 +91,19 @@ def _bootstraps(n, rs):
     return bs_inds, np.setdiff1d(range(n), bs_inds)
 
 
+def db_cleanup(dbname):
+    db_conn = sqlite3.connect(self.db_file)
+    with db_conn:
+        db_conn.execute(
+            "delete from fitted_models where fitted_models.model_idx not in (select distinct(model_idx) from ensemble);")
+        db_conn.execute(
+            "delete from model_scores where model_scores.model_idx not in (select distinct(model_idx) from ensemble);")
+        db_conn.execute("delete from models where models.model_idx not in (select distinct(model_idx) from ensemble);")
+        db_conn.execute("VACUUM;")
+    db_conn.close()
+    return
+
+
 class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
     """Caruana-style ensemble selection [1][2]
 

@@ -79,7 +79,7 @@ from sklearn.metrics import classification_report
 from sklearn.datasets import load_svmlight_file
 from sklearn.cross_validation import train_test_split
 
-from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor
+from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor, db_cleanup
 from sklearn.metrics import mean_squared_error, r2_score
 from model_library import build_model_library
 from math import sqrt
@@ -161,6 +161,9 @@ def parse_args():
 
     parser.add_argument('-v', dest='verbose', action='store_true',
                         help='show progress messages', default=False)
+
+    help_fmt = 'remove unused models from db to save space'
+    parser.add_argument('-removal', dest='removal', help=help_fmt, default=True)
 
     return parser.parse_args()
 
@@ -253,6 +256,8 @@ def trainMan(res):
             rmse = sqrt(mean_squared_error(y_test, preds))
             print('Test set RMSE from best model: %.5f' % rmse)
         print('\n Test set accuracy from best model: %.5f' % score)
+        if removal == True:
+            db_cleanup(res.db_file)
 
         preds = ens.predict(X_test)
 

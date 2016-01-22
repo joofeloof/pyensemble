@@ -92,9 +92,8 @@ def predictMan(res):
             mesg = " ".join(["%.5f" % v for v in p])
         else:
             mesg = p
-        print
-        mesg
-    return mesg
+        print(str(mesg))
+    return preds
 
 
 
