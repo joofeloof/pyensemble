@@ -256,7 +256,7 @@ def trainMan(res):
             rmse = sqrt(mean_squared_error(y_test, preds))
             print('Test set RMSE from best model: %.5f' % rmse)
         print('\n Test set accuracy from best model: %.5f' % score)
-        if removal == True:
+        if res.removal == True:
             try:
                 db_cleanup(res.db_file)
                 print("Removing unwanted models...")
