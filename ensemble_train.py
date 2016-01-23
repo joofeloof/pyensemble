@@ -262,7 +262,6 @@ def trainMan(res):
                 print("Removing unwanted models...")
             except:
                 print("Error pruning db_file")
-                continue
 
         preds = ens.predict(X_test)
 

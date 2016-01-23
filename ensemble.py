@@ -92,7 +92,7 @@ def _bootstraps(n, rs):
 
 
 def db_cleanup(dbname):
-    db_conn = sqlite3.connect(self.db_file)
+    db_conn = sqlite3.connect(dbname)
     with db_conn:
         db_conn.execute(
             "delete from fitted_models where fitted_models.model_idx not in (select distinct(model_idx) from ensemble);")
