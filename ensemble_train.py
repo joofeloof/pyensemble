@@ -256,12 +256,6 @@ def trainMan(res):
             rmse = sqrt(mean_squared_error(y_test, preds))
             print('Test set RMSE from best model: %.5f' % rmse)
         print('\n Test set accuracy from best model: %.5f' % score)
-        if res.removal == True:
-            try:
-                db_cleanup(res.db_file)
-                print("Removing unwanted models...")
-            except:
-                print("Error pruning db_file")
 
         preds = ens.predict(X_test)
 
@@ -277,6 +271,14 @@ def trainMan(res):
             fmt = '\n Test set classification report for final ensemble:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
+
+        if res.removal == True:
+            try:
+                db_cleanup(res.db_file)
+                print("Removing unwanted models...")
+            except:
+                print("Error pruning db_file")
+
     return
 
 if (__name__ == '__main__'):
