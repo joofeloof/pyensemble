@@ -283,7 +283,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
         db_conn = sqlite3.connect(self.db_file)
         with db_conn:
             db_conn.execute("pragma journal_mode = off")
-            db_conn.execute("PRAGMA schema.auto_vacuum = FULL;")
+            db_conn.execute("PRAGMA auto_vacuum = FULL;")
 
         if (models):
             # build database
@@ -889,7 +889,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         db_conn = sqlite3.connect(self.db_file)
         with db_conn:
             db_conn.execute("pragma journal_mode = off")
-            db_conn.execute("PRAGMA schema.auto_vacuum = FULL;")
+            db_conn.execute("PRAGMA auto_vacuum = FULL;")
 
         if (models):
             # build database
