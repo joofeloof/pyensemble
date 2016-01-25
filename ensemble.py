@@ -99,7 +99,7 @@ def db_cleanup(dbname):
         db_conn.execute(
             "delete from model_scores where model_scores.model_idx not in (select distinct(model_idx) from ensemble);")
         db_conn.execute("delete from models where models.model_idx not in (select distinct(model_idx) from ensemble);")
-        db_conn.execute("VACUUM;")
+        # db_conn.execute("VACUUM;")
     db_conn.close()
     return
 
@@ -283,6 +283,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
         db_conn = sqlite3.connect(self.db_file)
         with db_conn:
             db_conn.execute("pragma journal_mode = off")
+            db_conn.execute("PRAGMA schema.auto_vacuum = FULL;")
 
         if (models):
             # build database
@@ -888,6 +889,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         db_conn = sqlite3.connect(self.db_file)
         with db_conn:
             db_conn.execute("pragma journal_mode = off")
+            db_conn.execute("PRAGMA schema.auto_vacuum = FULL;")
 
         if (models):
             # build database
