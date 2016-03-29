@@ -83,6 +83,7 @@ from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor, db
 from sklearn.metrics import mean_squared_error, r2_score
 from model_library import build_model_library
 from math import sqrt
+from scipy import sparse
 
 
 def parse_args():
@@ -165,6 +166,8 @@ def parse_args():
     help_fmt = 'remove unused models from db to save space'
     parser.add_argument('-removal', dest='removal', help=help_fmt, default=True)
 
+    help_fmt = 'sample weight column index (integer)'
+    parser.add_argument('-sweight', dest='sweight', type=int, help=help_fmt, default=None)
     return parser.parse_args()
 
 
@@ -180,6 +183,15 @@ def trainMan(res):
                                   random_state=res.seed)
 
         X_train, X_test, y_train, y_test = splits
+        '''
+        #for speedups, convert to sparse matrices
+        X_train = sparse.csc_matrix(X_train)
+        y_train = sparse.csc_matrix(y_train)
+
+        X_test = sparse.csr_matrix(X_test)
+        y_test = sparse.csr_matrix(y_test)
+        '''
+
         print('Train/hillclimbing set size: %d' % len(X_train))
         print('              Test set size: %d\n' % len(X_test))
     else:
@@ -206,6 +218,7 @@ def trainMan(res):
         'max_models': res.max_models,
         'random_state': res.seed,
         'meth': res.meth,
+        'sweight': res.sweight,
     }
     print(str(res.meth))
     try:

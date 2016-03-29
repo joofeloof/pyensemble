@@ -790,7 +790,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                  score_metric='rmse',
                  epsilon=0.01, max_models=50,
                  use_epsilon=False, use_bootstrap=False,
-                 verbose=False, random_state=None, meth='Regression'):
+                 verbose=False, random_state=None, sweight=None, meth='Regression'):
 
         self.db_file = db_file
         self.models = models
@@ -807,6 +807,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         self.verbose = verbose
         self.random_state = random_state
         self.meth = meth
+        self.sweight = sweight
 
         self._check_params()
 
@@ -962,8 +963,10 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
             for fold_idx, fold in enumerate(self._folds):
                 train_inds, _ = fold
-                model.fit(X[train_inds], y[train_inds])
-
+                if self.sweight:
+                    model.fit(X[train_inds], y[train_inds], sample_weight=X[train_inds, self.sweight])
+                else:
+                    model.fit(X[train_inds], y[train_inds])
                 pickled_model = buffer(dumps(model))
                 model_folds.append((model_idx, fold_idx, pickled_model))
 
