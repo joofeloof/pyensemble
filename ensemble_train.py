@@ -168,6 +168,7 @@ def parse_args():
 
     help_fmt = 'sample weight column index (integer)'
     parser.add_argument('-sweight', dest='sweight', type=int, help=help_fmt, default=None)
+
     return parser.parse_args()
 
 
