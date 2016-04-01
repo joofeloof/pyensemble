@@ -169,6 +169,9 @@ def parse_args():
     help_fmt = 'sample weight column index (integer)'
     parser.add_argument('-sweight', dest='sweight', type=int, help=help_fmt, default=None)
 
+    help_fmt = 'retrain models that comprise ensemble on all available training data'
+    parser.add_argument('-retrain', dest='retrain', help=help_fmt, default=False)
+
     return parser.parse_args()
 
 
@@ -285,6 +288,12 @@ def trainMan(res):
             fmt = '\n Test set classification report for final ensemble:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
+
+        if res.retrain == True:
+            X_train, y_train = load_svmlight_file(res.data_file)
+            X_train = X_train.toarray()
+            print('Retraining models comprising ensemble on full training set!')
+            ens.retrain_ensemble(X_train, y_train)
 
         if res.removal == True:
             try:

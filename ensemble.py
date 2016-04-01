@@ -1091,6 +1091,61 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
         score = self._metric(y, y_bin, new_probs, meth=self.meth)
         return score, new_probs
 
+    def retrain_ensemble(self, X, y):
+
+        if (self.verbose):
+            sys.stderr.write('\nrefitting models in ensemble:\n')
+
+        if (self.use_bootstrap):
+            n = X.shape[0]
+            rs = check_random_state(self.random_state)
+            self._folds = [_bootstraps(n, rs) for _ in xrange(self.n_folds)]
+        else:
+            self._folds = list(KFold(len(y), n_folds=self.n_folds))
+
+        select_stmt = "select pickled_model from models where model_idx = ?"
+        insert_stmt = """insert into fitted_models
+                             (model_idx, fold_idx, pickled_model)
+                         values (?,?,?)"""
+
+        ensemble_stmt = "select model_idx from ensemble order by weight desc"
+
+        db_conn = sqlite3.connect(self.db_file)
+        curs = db_conn.cursor()
+
+        ensemble_model_ids = curs.execute(ensemble_stmt).fetchall()
+
+        for model_idx in ensemble_model_ids:
+            model_idx = model_idx[0]
+            curs.execute(select_stmt, [model_idx])
+            pickled_model = curs.fetchone()[0]
+            model = loads(str(pickled_model))
+
+            model_folds = []
+
+            for fold_idx, fold in enumerate(self._folds):
+                train_inds, _ = fold
+                if self.sweight:
+                    model.fit(X, y, sample_weight=X[:, self.sweight])
+                else:
+                    model.fit(X, y)
+                pickled_model = buffer(dumps(model))
+                model_folds.append((model_idx, fold_idx, pickled_model))
+
+            with db_conn:
+                db_conn.executemany(insert_stmt, model_folds)
+
+            if (self.verbose):
+                if ((model_idx + 1) % 50 == 0):
+                    sys.stderr.write('%d\n' % (model_idx + 1))
+                else:
+                    sys.stderr.write('.')
+
+        if (self.verbose):
+            sys.stderr.write('\n')
+
+        db_conn.close()
+
     def _ensemble_from_candidates(self, db_conn, candidates, y, y_bin):
         """Build an ensemble from a list of candidate models"""
 
