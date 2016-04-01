@@ -1104,6 +1104,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
             self._folds = list(KFold(len(y), n_folds=self.n_folds))
 
         select_stmt = "select pickled_model from models where model_idx = ?"
+        delete_stmt = """delete from fitted_models where model_idx = ?"""
         insert_stmt = """insert into fitted_models
                              (model_idx, fold_idx, pickled_model)
                          values (?,?,?)"""
@@ -1131,6 +1132,9 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                     model.fit(X, y)
                 pickled_model = buffer(dumps(model))
                 model_folds.append((model_idx, fold_idx, pickled_model))
+
+            with db_conn:
+                curs.execute(delete_stmt, [model_idx])
 
             with db_conn:
                 db_conn.executemany(insert_stmt, model_folds)
