@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="added retrain_ensemble parameter and necessary functions to allow for retraining models comprising ensemble on full dataset.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble.py" afterPath="$PROJECT_DIR$/ensemble.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_train.py" afterPath="$PROJECT_DIR$/ensemble_train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_predict.py" afterPath="$PROJECT_DIR$/ensemble_predict.py" />
     </list>
     <ignored path="pyensemble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/model_library.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="228" column="43" selection-start-line="228" selection-start-column="43" selection-end-line="228" selection-end-column="43" />
               <folding>
                 <element signature="e#164#201#0" expanded="true" />
               </folding>
@@ -37,24 +36,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39664805">
-              <caret line="1115" column="0" selection-start-line="1115" selection-start-column="0" selection-end-line="1115" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.764706">
+              <caret line="922" column="24" selection-start-line="922" selection-start-column="20" selection-end-line="922" selection-end-column="24" />
               <folding>
                 <element signature="e#706#715#0" expanded="true" />
-                <element signature="e#24659#26970#1" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble_predict.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ensemble_predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.17564656">
+              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
               <folding>
                 <element signature="e#1099#1136#0" expanded="true" />
               </folding>
@@ -65,8 +63,8 @@
       <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-126.911766">
-              <caret line="309" column="0" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+            <state vertical-scroll-proportion="-58.5">
+              <caret line="292" column="39" selection-start-line="292" selection-start-column="31" selection-end-line="292" selection-end-column="39" />
               <folding>
                 <element signature="e#3365#3402#0" expanded="true" />
               </folding>
@@ -102,17 +100,17 @@
         <option value="$PROJECT_DIR$/pd_to_svmlight.py" />
         <option value="$PROJECT_DIR$/model_library.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/ensemble_predict.py" />
         <option value="$PROJECT_DIR$/ensemble.py" />
         <option value="$PROJECT_DIR$/ensemble_train.py" />
+        <option value="$PROJECT_DIR$/ensemble_predict.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="24" />
-    <option name="width" value="1922" />
-    <option name="height" value="1057" />
+    <option name="x" value="-67" />
+    <option name="y" value="138" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -139,8 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +157,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -481,27 +479,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1922" height="1057" extended-state="6" />
+    <frame x="-67" y="138" width="1920" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11302083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11209593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -519,9 +517,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -626,7 +624,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -674,7 +671,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -722,7 +718,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -770,7 +765,6 @@
           <caret line="941" column="50" selection-start-line="941" selection-start-column="50" selection-end-line="941" selection-end-column="50" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -818,7 +812,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -866,7 +859,6 @@
           <caret line="977" column="18" selection-start-line="977" selection-start-column="16" selection-end-line="977" selection-end-column="18" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -914,7 +906,6 @@
           <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -962,7 +953,6 @@
           <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1010,7 +1000,6 @@
           <caret line="667" column="24" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1035,7 +1024,7 @@
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="228" column="43" selection-start-line="228" selection-start-column="43" selection-end-line="228" selection-end-column="43" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -1044,31 +1033,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-126.911766">
-          <caret line="309" column="0" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
+        <state vertical-scroll-proportion="-58.5">
+          <caret line="292" column="39" selection-start-line="292" selection-start-column="31" selection-end-line="292" selection-end-column="39" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
+    <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.764706">
+          <caret line="922" column="24" selection-start-line="922" selection-start-column="20" selection-end-line="922" selection-end-column="24" />
           <folding>
-            <element signature="e#1099#1136#0" expanded="true" />
+            <element signature="e#706#715#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble.py">
+    <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39664805">
-          <caret line="1115" column="0" selection-start-line="1115" selection-start-column="0" selection-end-line="1115" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.17564656">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
           <folding>
-            <element signature="e#706#715#0" expanded="true" />
-            <element signature="e#24659#26970#1" expanded="false" />
+            <element signature="e#1099#1136#0" expanded="true" />
           </folding>
         </state>
       </provider>

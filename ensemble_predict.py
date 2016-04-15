@@ -62,12 +62,20 @@ def parse_args():
     parser.add_argument('-p', dest='return_probs',
                         action='store_true', default=False,
                         help='predict probabilities')
+    
+    parser.add_argument('-n_features', dest='nfeat',
+                        default=False, help='number of features from training in testing set..fix problem with '
+                                            'svmlight import due to sparsity')
 
     return parser.parse_args()
 
 
 def predictMan(res):
-    X, _ = load_svmlight_file(res.data_file)
+    try:
+        X, _ = load_svmlight_file(res.data_file, n_features=res.nfeat)
+    except Exception:
+        X, _ = load_svmlight_file(res.data_file)
+
     X = X.toarray()
 
     if res.meth[0] == 'Classification':
