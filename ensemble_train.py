@@ -243,21 +243,29 @@ def trainMan(res):
     # fit models, score, build ensemble
     ens.fit(X_train, y_train)
 
+    list_of_results = {}
+
     preds = ens.best_model_predict(X_train)
     if res.meth[0] == 'Classifier':
         score = accuracy_score(y_train, preds)
+        list_of_results['best_train_score'] = score
     elif res.meth[0] == 'Regression':
         score = r2_score(y_train, preds)
         rmse = sqrt(mean_squared_error(y_train, preds))
         print('Train set RMSE from best model: %.5f' % rmse)
+        list_of_results['best_train_score'] = score
+        list_of_results['best_train_rmse'] = rmse
     print('Train set accuracy from best model: %.5f' % score)
 
     preds = ens.predict(X_train)
     if res.meth[0] == 'Classifier':
         score = accuracy_score(y_train, preds)
+        list_of_results['ens_train_score'] = score
     elif res.meth[0] == 'Regression':
         score = r2_score(y_train, preds)
         rmse = sqrt(mean_squared_error(y_train, preds))
+        list_of_results['ens_train_score'] = score
+        list_of_results['ens_train_rmse'] = rmse
         print('Train set RMSE from final ensemble: %.5f' % rmse)
     print('Train set accuracy from final ensemble: %.5f' % score)
 
@@ -265,12 +273,15 @@ def trainMan(res):
         preds = ens.best_model_predict(X_test)
         if res.meth[0] == 'Classifier':
             score = accuracy_score(y_test, preds)
+            list_of_results['best_test_score'] = score
             fmt = '\n Test set classification report for best model:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
         elif res.meth[0] == 'Regression':
             score = r2_score(y_test, preds)
             rmse = sqrt(mean_squared_error(y_test, preds))
+            list_of_results['best_test_score'] = score
+            list_of_results['best_test_rmse'] = rmse
             print('Test set RMSE from best model: %.5f' % rmse)
         print('\n Test set accuracy from best model: %.5f' % score)
 
@@ -278,10 +289,13 @@ def trainMan(res):
 
         if res.meth[0] == 'Classifier':
             score = accuracy_score(y_test, preds)
+            list_of_results['ens_test_score'] = score
         elif res.meth[0] == 'Regression':
             score = r2_score(y_test, preds)
             rmse = sqrt(mean_squared_error(y_test, preds))
-        print('Test set RMSE from final ensemble: %.5f' % rmse)
+            list_of_results['ens_test_score'] = score
+            list_of_results['ens_test_rmse'] = rmse
+            print('Test set RMSE from final ensemble: %.5f' % rmse)
         print(' Test set accuracy from final ensemble: %.5f' % score)
 
         if res.meth[0] == 'Classifier':
@@ -301,8 +315,13 @@ def trainMan(res):
                 print("Removing unwanted models...")
             except:
                 print("Error pruning db_file")
+    metric_keys = ['best_train_score', 'best_train_rmse', 'ens_train_score', 'ens_train_rmse',
+                   'best_test_score', 'best_test_rmse', 'ens_test_score', 'ens_test_rmse']
+    if set(list_of_results.keys()) <> set(metric_keys):
+        for keynm in set(metric_keys) - set(list_of_results.keys()):
+            list_of_results[keynm] = 0.0
 
-    return
+    return list_of_results
 
 if (__name__ == '__main__'):
     res = parse_args()

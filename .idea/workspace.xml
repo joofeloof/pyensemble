@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="added retrain_ensemble parameter and necessary functions to allow for retraining models comprising ensemble on full dataset.">
+    <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="add ability to set nfeatures that svmlight file should have.  Occasionally due to sparse storage format, opening file for prediction appears as though the wrong number of features exist.  Now can pass -n_features on command line or the subobject 'nfeat' to the predictMan function">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_predict.py" afterPath="$PROJECT_DIR$/ensemble_predict.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_train.py" afterPath="$PROJECT_DIR$/ensemble_train.py" />
     </list>
     <ignored path="pyensemble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +40,7 @@
       <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.764706">
+            <state vertical-scroll-proportion="0.0">
               <caret line="922" column="24" selection-start-line="922" selection-start-column="20" selection-end-line="922" selection-end-column="24" />
               <folding>
                 <element signature="e#706#715#0" expanded="true" />
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble_predict.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ensemble_predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17564656">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
                 <element signature="e#1099#1136#0" expanded="true" />
               </folding>
@@ -60,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ensemble_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-58.5">
-              <caret line="292" column="39" selection-start-line="292" selection-start-column="31" selection-end-line="292" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.7898707">
+              <caret line="321" column="38" selection-start-line="321" selection-start-column="38" selection-end-line="321" selection-end-column="38" />
               <folding>
                 <element signature="e#3365#3402#0" expanded="true" />
               </folding>
@@ -107,8 +108,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-67" />
-    <option name="y" value="138" />
+    <option name="x" value="2069" />
+    <option name="y" value="60" />
     <option name="width" value="1920" />
     <option name="height" value="1056" />
   </component>
@@ -137,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -158,7 +160,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,20 +476,24 @@
       <option name="project" value="LOCAL" />
       <updated>1459529527048</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add ability to set nfeatures that svmlight file should have.  Occasionally due to sparse storage format, opening file for prediction appears as though the wrong number of features exist.  Now can pass -n_features on command line or the subobject 'nfeat' to the predictMan function">
+      <created>1460749706318</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1460749706318</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-67" y="138" width="1920" height="1056" extended-state="0" />
+    <frame x="2069" y="60" width="1920" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11209593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11157456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -496,8 +501,10 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -534,7 +541,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding regressor class" />
     <MESSAGE value="Modified input args for additional error metrics as well as the regression models, and the overall method for the split ('Regression' or 'Classification'" />
     <MESSAGE value="cleanup." />
     <MESSAGE value="fixing errors" />
@@ -559,7 +565,8 @@
     <MESSAGE value="remove auto_vacuum" />
     <MESSAGE value="added sample_weight" />
     <MESSAGE value="added retrain_ensemble parameter and necessary functions to allow for retraining models comprising ensemble on full dataset." />
-    <option name="LAST_COMMIT_MESSAGE" value="added retrain_ensemble parameter and necessary functions to allow for retraining models comprising ensemble on full dataset." />
+    <MESSAGE value="add ability to set nfeatures that svmlight file should have.  Occasionally due to sparse storage format, opening file for prediction appears as though the wrong number of features exist.  Now can pass -n_features on command line or the subobject 'nfeat' to the predictMan function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ability to set nfeatures that svmlight file should have.  Occasionally due to sparse storage format, opening file for prediction appears as though the wrong number of features exist.  Now can pass -n_features on command line or the subobject 'nfeat' to the predictMan function" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1031,19 +1038,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-58.5">
-          <caret line="292" column="39" selection-start-line="292" selection-start-column="31" selection-end-line="292" selection-end-column="39" />
-          <folding>
-            <element signature="e#3365#3402#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.764706">
+        <state vertical-scroll-proportion="0.0">
           <caret line="922" column="24" selection-start-line="922" selection-start-column="20" selection-end-line="922" selection-end-column="24" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
@@ -1053,10 +1050,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17564656">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7898707">
+          <caret line="321" column="38" selection-start-line="321" selection-start-column="38" selection-end-line="321" selection-end-column="38" />
+          <folding>
+            <element signature="e#3365#3402#0" expanded="true" />
           </folding>
         </state>
       </provider>
