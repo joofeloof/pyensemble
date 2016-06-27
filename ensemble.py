@@ -294,7 +294,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
             insert_stmt = """insert into models (model_idx, pickled_model)
                              values (?, ?)"""
             with db_conn:
-                vals = ((i, buffer(dumps(m))) for i, m in enumerate(models))
+                vals = ((i, buffer(dumps(m, protocol=2))) for i, m in enumerate(models))
                 db_conn.executemany(insert_stmt, vals)
                 create_stmt = "create index models_index on models (model_idx)"
                 db_conn.execute(create_stmt)
@@ -358,7 +358,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
                 train_inds, _ = fold
                 model.fit(X[train_inds], y[train_inds])
 
-                pickled_model = buffer(dumps(model))
+                pickled_model = buffer(dumps(model, protocol=2))
                 model_folds.append((model_idx, fold_idx, pickled_model))
 
             with db_conn:
@@ -421,7 +421,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
 
             # save score and probs array
             with db_conn:
-                vals = (model_idx, score, buffer(dumps(probs)))
+                vals = (model_idx, score, buffer(dumps(probs, protocol=2)))
                 db_conn.execute(insert_stmt, vals)
 
             if (self.verbose):
@@ -901,7 +901,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
             insert_stmt = """insert into models (model_idx, pickled_model)
                              values (?, ?)"""
             with db_conn:
-                vals = ((i, buffer(dumps(m))) for i, m in enumerate(models))
+                vals = ((i, buffer(dumps(m, protocol=2))) for i, m in enumerate(models))
                 db_conn.executemany(insert_stmt, vals)
                 create_stmt = "create index models_index on models (model_idx)"
                 db_conn.execute(create_stmt)
@@ -967,7 +967,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                     model.fit(X[train_inds], y[train_inds], sample_weight=X[train_inds, self.sweight])
                 else:
                     model.fit(X[train_inds], y[train_inds])
-                pickled_model = buffer(dumps(model))
+                pickled_model = buffer(dumps(model, protocol=2))
                 model_folds.append((model_idx, fold_idx, pickled_model))
 
             with db_conn:
@@ -1031,7 +1031,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
 
             # save score and prediction vector (probs)
             with db_conn:
-                vals = (model_idx, score, buffer(dumps(probs)))
+                vals = (model_idx, score, buffer(dumps(probs, protocol=2)))
                 db_conn.execute(insert_stmt, vals)
 
             if (self.verbose):
@@ -1130,7 +1130,7 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
                     model.fit(X, y, sample_weight=X[:, self.sweight])
                 else:
                     model.fit(X, y)
-                pickled_model = buffer(dumps(model))
+                pickled_model = buffer(dumps(model, protocol=2))
                 model_folds.append((model_idx, fold_idx, pickled_model))
 
             with db_conn:
