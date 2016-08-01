@@ -184,7 +184,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
                  score_metric='accuracy',
                  epsilon=0.01, max_models=50,
                  use_epsilon=False, use_bootstrap=False,
-                 verbose=False, random_state=None, meth='Classifier'):
+                 verbose=False, random_state=None, meth='Classifier', sweight=None):
 
         self.db_file = db_file
         self.models = models
@@ -201,7 +201,7 @@ class EnsembleSelectionClassifier(BaseEstimator, ClassifierMixin):
         self.verbose = verbose
         self.random_state = random_state
         self.meth = meth
-
+        self.sweight = sweight
         self._check_params()
 
         self._folds = None

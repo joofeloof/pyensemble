@@ -226,7 +226,7 @@ def trainMan(res):
     }
     print(str(res.meth))
     try:
-        if res.meth[0] == 'Classifier':
+        if res.meth[0] == 'Classification':
             ens = EnsembleSelectionClassifier(**param_dict)
             print('fitting ensemble:\n%s\n' % ens)
         elif res.meth[0] == 'Regression':
@@ -246,7 +246,7 @@ def trainMan(res):
     list_of_results = {}
 
     preds = ens.best_model_predict(X_train)
-    if res.meth[0] == 'Classifier':
+    if res.meth[0] == 'Classification':
         score = accuracy_score(y_train, preds)
         list_of_results['best_train_score'] = score
     elif res.meth[0] == 'Regression':
@@ -258,7 +258,7 @@ def trainMan(res):
     print('Train set accuracy from best model: %.5f' % score)
 
     preds = ens.predict(X_train)
-    if res.meth[0] == 'Classifier':
+    if res.meth[0] == 'Classification':
         score = accuracy_score(y_train, preds)
         list_of_results['ens_train_score'] = score
     elif res.meth[0] == 'Regression':
@@ -271,7 +271,7 @@ def trainMan(res):
 
     if (do_test):
         preds = ens.best_model_predict(X_test)
-        if res.meth[0] == 'Classifier':
+        if res.meth[0] == 'Classification':
             score = accuracy_score(y_test, preds)
             list_of_results['best_test_score'] = score
             fmt = '\n Test set classification report for best model:\n%s'
@@ -287,7 +287,7 @@ def trainMan(res):
 
         preds = ens.predict(X_test)
 
-        if res.meth[0] == 'Classifier':
+        if res.meth[0] == 'Classification':
             score = accuracy_score(y_test, preds)
             list_of_results['ens_test_score'] = score
         elif res.meth[0] == 'Regression':
@@ -298,7 +298,7 @@ def trainMan(res):
             print('Test set RMSE from final ensemble: %.5f' % rmse)
         print(' Test set accuracy from final ensemble: %.5f' % score)
 
-        if res.meth[0] == 'Classifier':
+        if res.meth[0] == 'Classification':
             fmt = '\n Test set classification report for final ensemble:\n%s'
             report = classification_report(y_test, preds)
             print(fmt % report)
