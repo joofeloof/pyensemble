@@ -25,7 +25,8 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
 from sklearn.kernel_approximation import Nystroem
-
+from xgboost.sklearn import XGBClassifier as XGBoostingClassifier
+from xgboost.sklearn import XGBRegressor as XGBoostingRegressor
 
 # generic model builder
 def build_models(model_class, param_grid):
@@ -70,6 +71,23 @@ def build_gradientBoostingClassifiers(random_state=None):
 
     return build_models(GradientBoostingClassifier, param_grid)
 
+
+def build_xgBoostingClassifiers(random_state=None):
+    param_grid = {
+        'max_depth': [1, 2, 5, 10],
+        'n_estimators': [10, 20, 50, 100],
+        'subsample': np.linspace(0.2, 1.0, 5),
+        # 'max_depth': [1,3,5,7,10],
+        'min_child_weight': [1],  # np.linspace(1,3,5),
+        # 'colsample_bytree' : [0.8],
+        'max_delta_step': [1],
+        'seed': [random_state],
+        'nthread': [-1],
+    }
+
+    return build_models(XGBoostingClassifier, param_grid)
+
+
 def build_gradientBoostingRegressors(random_state=None):
     param_grid = {
         'max_depth': [1, 2, 5, 10],
@@ -79,6 +97,23 @@ def build_gradientBoostingRegressors(random_state=None):
     }
 
     return build_models(GradientBoostingRegressor, param_grid)
+
+
+def build_xgBoostingRegressors(random_state=None):
+    param_grid = {
+        'max_depth': [1, 2, 5, 10],
+        'n_estimators': [10, 20, 50, 100],
+        'subsample': np.linspace(0.2, 1.0, 5),
+        # 'max_features': np.linspace(0.2, 1.0, 5),
+        'min_child_weight': [1, 2],
+        'nthread': [-1],
+        'seed': [random_state],
+        'max_delta_step': [1],
+
+    }
+
+    return build_models(XGBoostingRegressor, param_grid)
+
 
 def build_sgdClassifiers(random_state=None):
     param_grid = {
@@ -227,6 +262,8 @@ models_dict = {
     'svc': build_svcs,
     'sgd': build_sgdClassifiers,
     'gbc': build_gradientBoostingClassifiers,
+    'xgbc': build_xgBoostingClassifiers,
+    'xgbr': build_xgBoostingRegressors,
     'dtree': build_decisionTreeClassifiers,
     'forest': build_randomForestClassifiers,
     'extra': build_extraTreesClassifiers,

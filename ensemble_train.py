@@ -99,7 +99,7 @@ def parse_args():
     model_choices = ['svc', 'sgd', 'gbc', 'dtree',
                      'forest', 'extra', 'kmp', 'kernp',
                      'gb_reg', 'dtree_reg', 'forest_reg',
-                     'extra_reg']
+                     'extra_reg', 'xgbc', 'xgbr']
     help_fmt = 'model types to include as ensemble candidates %s' % dflt_fmt
     parser.add_argument('-M', dest='model_types', nargs='+',
                         choices=model_choices,
