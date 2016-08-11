@@ -73,6 +73,8 @@ def build_gradientBoostingClassifiers(random_state=None):
 
 
 def build_xgBoostingClassifiers(random_state=None):
+    import multiprocessing as mp
+    from math import ceil
     param_grid = {
         'max_depth': [1, 2, 5, 10],
         'n_estimators': [10, 20, 50, 100],
@@ -82,7 +84,7 @@ def build_xgBoostingClassifiers(random_state=None):
         # 'colsample_bytree' : [0.8],
         'max_delta_step': [1],
         'seed': [random_state],
-        'nthread': [-1],
+        'nthread': [int(ceil(mp.cpu_count() / 2))],
     }
 
     return build_models(XGBoostingClassifier, param_grid)
