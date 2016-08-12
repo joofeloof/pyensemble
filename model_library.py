@@ -81,7 +81,7 @@ def build_xgBoostingClassifiers(random_state=None):
         n_thread = 4
     param_grid = {
         'max_depth': [1, 2, 5, 10],
-        'n_estimators': range(25, 225, 25),
+        'n_estimators': range(25, 175, 25),
         'subsample': np.linspace(0.2, 1.0, 5),
         # 'max_depth': [1,3,5,7,10],
         'min_child_weight': range(1, 5, 2),  # np.linspace(1,3,5),
