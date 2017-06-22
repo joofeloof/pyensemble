@@ -964,13 +964,16 @@ class EnsembleSelectionRegressor(BaseEstimator, RegressorMixin):
             for fold_idx, fold in enumerate(self._folds):
                 train_inds, _ = fold
                 if self.sweight:
-                    model.fit(X[train_inds], y[train_inds], sample_weight=X[train_inds, self.sweight])
+                    try:
+                        model.fit(X[train_inds], y[train_inds], sample_weight=X[train_inds, self.sweight])
                     '''
                     if str(self.models[model_idx].__class__)[8:15]=='sklearn':
                         model.fit(X[train_inds], y[train_inds], sample_weight=X[train_inds, self.sweight])
                     elif str(self.models.__class__)[8:15]=='xgboost':
                         model.fit(X[train_inds], y[train_inds], weight=X[train_inds, self.sweight])
                     '''
+                    except TypeError:
+                    model.fit(X[train_inds], y[train_inds])
                 else:
                     model.fit(X[train_inds], y[train_inds])
                 pickled_model = buffer(dumps(model, protocol=2))

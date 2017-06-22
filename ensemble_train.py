@@ -317,7 +317,7 @@ def trainMan(res):
                 print("Error pruning db_file")
     metric_keys = ['best_train_score', 'best_train_rmse', 'ens_train_score', 'ens_train_rmse',
                    'best_test_score', 'best_test_rmse', 'ens_test_score', 'ens_test_rmse']
-    if set(list_of_results.keys()) <> set(metric_keys):
+    if set(list_of_results.keys()) != set(metric_keys):
         for keynm in set(metric_keys) - set(list_of_results.keys()):
             list_of_results[keynm] = 0.0
 
