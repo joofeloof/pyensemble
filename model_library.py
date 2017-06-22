@@ -63,6 +63,8 @@ def build_randomForestRegressors(random_state=None):
 
 
 def build_xgBoostingRegressors(random_state=None):
+    import multiprocessing as mp
+
     if mp.cpu_count() <= 4:
         n_thread = 2
     else:
