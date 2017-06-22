@@ -61,6 +61,28 @@ def build_randomForestRegressors(random_state=None):
 
     return build_models(RandomForestRegressor, param_grid)
 
+
+def build_xgBoostingRegressors(random_state=None):
+    if mp.cpu_count() <= 4:
+        n_thread = 2
+    else:
+        n_thread = 4
+
+    param_grid = {
+        'max_depth': [1, 2, 5, 10],
+        'n_estimators': [50, 100, 200, 500],
+        'subsample': np.linspace(0.2, 1.0, 5),
+        # 'max_features': np.linspace(0.2, 1.0, 5),
+        'max_depth': [1, 2, 4, 7, 10],
+        'min_child_weight': [1, 2],
+        'nthread': [n_thread],
+        'seed': [random_state],
+        'max_delta_step': [1],
+    }
+
+    return build_models(XGBoostingRegressor, param_grid)
+
+
 def build_gradientBoostingClassifiers(random_state=None):
     param_grid = {
         'max_depth': [1, 2, 5, 10],
@@ -105,22 +127,6 @@ def build_gradientBoostingRegressors(random_state=None):
     }
 
     return build_models(GradientBoostingRegressor, param_grid)
-
-
-def build_xgBoostingRegressors(random_state=None):
-    param_grid = {
-        'max_depth': [1, 2, 5, 10],
-        'n_estimators': [10, 20, 50, 100],
-        'subsample': np.linspace(0.2, 1.0, 5),
-        # 'max_features': np.linspace(0.2, 1.0, 5),
-        'min_child_weight': [1, 2],
-        'nthread': [-1],
-        'seed': [random_state],
-        'max_delta_step': [1],
-
-    }
-
-    return build_models(XGBoostingRegressor, param_grid)
 
 
 def build_sgdClassifiers(random_state=None):
