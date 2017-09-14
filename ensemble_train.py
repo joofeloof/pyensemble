@@ -83,6 +83,8 @@ from ensemble import EnsembleSelectionClassifier, EnsembleSelectionRegressor, db
 from sklearn.metrics import mean_squared_error, r2_score
 from model_library import build_model_library
 from math import sqrt
+import pandas as pd
+import sqlalchemy
 from scipy import sparse
 
 
@@ -321,7 +323,12 @@ def trainMan(res):
         for keynm in set(metric_keys) - set(list_of_results.keys()):
             list_of_results[keynm] = 0.0
 
-    return list_of_results
+    pd.DataFrame(list_of_results, index=[0]).to_sql('blob_metrics',
+                                                    sqlalchemy.create_engine('sqlite:///{0}'.format(res.db_file)),
+                                                    if_exists='replace',
+                                                    index=False)
+
+    return
 
 if (__name__ == '__main__'):
     res = parse_args()

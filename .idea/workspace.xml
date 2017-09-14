@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="increase n_estimators range">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pyensemble.iml" afterPath="$PROJECT_DIR$/.idea/pyensemble.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model_library.py" afterPath="$PROJECT_DIR$/model_library.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble.py" afterPath="$PROJECT_DIR$/ensemble.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ensemble_train.py" afterPath="$PROJECT_DIR$/ensemble_train.py" />
     </list>
     <ignored path="pyensemble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,21 +20,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="pyensemble" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model_library.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="model_library.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model_library.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5514706">
-              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+            <state relative-caret-position="237">
+              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
               <folding>
                 <element signature="e#164#201#0" expanded="true" />
               </folding>
@@ -39,11 +43,81 @@
       <file leaf-file-name="ensemble.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="2501">
+              <caret line="1363" column="8" lean-forward="false" selection-start-line="1363" selection-start-column="8" selection-end-line="1363" selection-end-column="8" />
               <folding>
                 <element signature="e#706#715#0" expanded="true" />
+                <element signature="e#3643#24676#0" expanded="false" />
+                <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+                <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+                <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+                <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+                <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+                <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+                <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+                <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+                <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+                <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+                <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+                <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+                <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+                <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+                <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+                <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+                <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+                <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+                <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+                <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+                <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+                <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+                <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+                <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+                <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+                <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+                <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+                <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+                <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+                <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+                <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+                <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+                <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+                <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+                <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+                <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+                <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+                <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+                <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+                <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+                <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+                <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2535">
+              <caret line="169" column="39" lean-forward="false" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,8 +125,8 @@
       <file leaf-file-name="ensemble_predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="14" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="14" />
+            <state relative-caret-position="1245">
+              <caret line="91" column="28" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
               <folding>
                 <element signature="e#1099#1136#0" expanded="true" />
               </folding>
@@ -60,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ensemble_train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ensemble_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="123" column="59" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="59" />
+            <state relative-caret-position="604">
+              <caret line="329" column="0" lean-forward="true" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
               <folding>
                 <element signature="e#3365#3402#0" expanded="true" />
               </folding>
@@ -81,6 +155,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sweight</find>
+      <find>&lt;&gt;</find>
+      <find>model =</find>
+      <find>grid_search</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -94,7 +176,7 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="test" target-branch="master" />
+      <push-target-info target-remote="test" target-branch="master" repo="$PROJECT_DIR$" source="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -104,25 +186,23 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ensemble_predict.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/ensemble_train.py" />
-        <option value="$PROJECT_DIR$/ensemble.py" />
         <option value="$PROJECT_DIR$/model_library.py" />
+        <option value="$PROJECT_DIR$/ensemble.py" />
+        <option value="$PROJECT_DIR$/ensemble_train.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1818" />
+    <option name="y" value="163" />
+    <option name="width" value="1440" />
+    <option name="height" value="831" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -143,22 +223,13 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyensemble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyensemble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyensemble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="pyensemble" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyensemble" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
@@ -166,7 +237,20 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../epmethods" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -181,9 +265,81 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pyensemble" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pyensemble" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pyensemble" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pyensemble" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pyensemble" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -205,94 +361,10 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pyensemble" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pyensemble" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pyensemble" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pyensemble" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -301,294 +373,388 @@
       <changelist id="c4ef7711-b52e-4450-8a3b-ea8b654b1263" name="Default" comment="" />
       <created>1450708586903</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1450708586903</updated>
     </task>
     <task id="LOCAL-00001" summary="adding regressor class">
       <created>1450709215631</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1450709215631</updated>
     </task>
     <task id="LOCAL-00002" summary="Adding regression scoring functions">
       <created>1450714752082</created>
       <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1450714752082</updated>
     </task>
     <task id="LOCAL-00003" summary="adding regressor class">
       <created>1450720481681</created>
       <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1450720481681</updated>
     </task>
     <task id="LOCAL-00004" summary="Modified input args for additional error metrics as well as the regression models, and the overall method for the split ('Regression' or 'Classification'">
       <created>1450722328057</created>
       <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1450722328057</updated>
     </task>
     <task id="LOCAL-00005" summary="cleanup.">
       <created>1450724941872</created>
       <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1450724941872</updated>
     </task>
     <task id="LOCAL-00006" summary="cleanup.">
       <created>1450726165930</created>
       <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1450726165930</updated>
     </task>
     <task id="LOCAL-00007" summary="cleanup.">
       <created>1450731111586</created>
       <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
       <updated>1450731111586</updated>
     </task>
     <task id="LOCAL-00008" summary="fixing errors">
       <created>1450734863071</created>
       <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1450734863071</updated>
     </task>
     <task id="LOCAL-00009" summary="swapped stratified k-fold for plain kfold in regression class">
       <created>1450736780247</created>
       <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1450736780247</updated>
     </task>
     <task id="LOCAL-00010" summary="note for build_ensemble function in regressor class...need to modify for continuous data.">
       <created>1450738525079</created>
       <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
       <updated>1450738525079</updated>
     </task>
     <task id="LOCAL-00011" summary="modified predict_proba functions for regression">
       <created>1450790826565</created>
       <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1450790826565</updated>
     </task>
     <task id="LOCAL-00012" summary="fixed kfold import">
       <created>1450790966937</created>
       <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
       <updated>1450790966937</updated>
     </task>
     <task id="LOCAL-00013" summary="fixed bad value pass to KFold">
       <created>1450792495373</created>
       <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
       <updated>1450792495373</updated>
     </task>
     <task id="LOCAL-00014" summary="fixed dimension of 'probs' s.t. is now a vector for regression">
       <created>1450812570795</created>
       <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
       <updated>1450812570795</updated>
     </task>
     <task id="LOCAL-00015" summary="Updated README">
       <created>1450813057840</created>
       <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
       <updated>1450813057840</updated>
     </task>
     <task id="LOCAL-00016" summary="Fix argmax error in best model selection (out of bounds error as axis was passed)">
       <created>1450813539131</created>
       <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
       <updated>1450813539131</updated>
     </task>
     <task id="LOCAL-00017" summary="More bug fixes">
       <created>1450815776494</created>
       <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
       <updated>1450815776494</updated>
     </task>
     <task id="LOCAL-00018" summary="Print rmse while building ensembles and modify ensemble_predict to handle regression.">
       <created>1450888850421</created>
       <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
       <updated>1450888850421</updated>
     </task>
     <task id="LOCAL-00019" summary="Create train and predict (main-esque) functions.  This way one can build up a structure of sorts and execute the functions from within other scripts while still allowing execution from command line (maintaining arg parsing)">
       <created>1451313176012</created>
       <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
       <updated>1451313176012</updated>
     </task>
     <task id="LOCAL-00020" summary="Add argument (-removal) to remove models not used in ensemble (and vacuum sqlite file) to save space.">
       <created>1453482695798</created>
       <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
       <updated>1453482695798</updated>
     </task>
     <task id="LOCAL-00021" summary="Handle exceptions in db_cleanup execution.">
       <created>1453485070384</created>
       <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
       <updated>1453485070384</updated>
     </task>
     <task id="LOCAL-00022" summary="Typo in db_cleanup">
       <created>1453511921263</created>
       <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
       <updated>1453511921263</updated>
     </task>
     <task id="LOCAL-00023" summary="Typo in db_cleanup (bad assignment of removal var)">
       <created>1453525662602</created>
       <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
       <updated>1453525662602</updated>
     </task>
     <task id="LOCAL-00024" summary="move removal logic to after all model checking is complete">
       <created>1453652469089</created>
       <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
       <updated>1453652469089</updated>
     </task>
     <task id="LOCAL-00025" summary="destroyed vacuum command when removal flag is set to true, and instead opt for auto_vacuum FULL on db creation for performance reasons.">
       <created>1453681399962</created>
       <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
       <updated>1453681399962</updated>
     </task>
     <task id="LOCAL-00026" summary="auto_vacuum typo">
       <created>1453681679383</created>
       <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
       <updated>1453681679383</updated>
     </task>
     <task id="LOCAL-00027" summary="remove auto_vacuum">
       <created>1453692266042</created>
       <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
       <updated>1453692266042</updated>
     </task>
     <task id="LOCAL-00028" summary="added sample_weight">
       <created>1459255532517</created>
       <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
       <updated>1459255532517</updated>
     </task>
     <task id="LOCAL-00029" summary="added retrain_ensemble parameter and necessary functions to allow for retraining models comprising ensemble on full dataset.">
       <created>1459529527048</created>
       <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
       <updated>1459529527048</updated>
     </task>
     <task id="LOCAL-00030" summary="add ability to set nfeatures that svmlight file should have.  Occasionally due to sparse storage format, opening file for prediction appears as though the wrong number of features exist.  Now can pass -n_features on command line or the subobject 'nfeat' to the predictMan function">
       <created>1460749706318</created>
       <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
       <updated>1460749706318</updated>
     </task>
     <task id="LOCAL-00031" summary="return a metric tracking dictionary">
       <created>1461176562233</created>
       <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
       <updated>1461176562233</updated>
     </task>
     <task id="LOCAL-00032" summary="warm_start = True in model generation (for regressormodels that support)">
       <created>1465592829150</created>
       <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
       <updated>1465592829150</updated>
     </task>
     <task id="LOCAL-00033" summary="warm_start param default false in model_library">
       <created>1466528438149</created>
       <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
       <updated>1466528438149</updated>
     </task>
     <task id="LOCAL-00034" summary="revert warm_start mods">
       <created>1466690624787</created>
       <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
       <updated>1466690624787</updated>
     </task>
     <task id="LOCAL-00035" summary="Testing post-receive">
       <created>1468878072551</created>
       <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
       <updated>1468878072551</updated>
     </task>
     <task id="LOCAL-00036" summary="Testing post-receive">
       <created>1468878173329</created>
       <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
       <updated>1468878173329</updated>
     </task>
     <task id="LOCAL-00037" summary="fixes to classifier branch">
       <created>1470083077989</created>
       <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
       <updated>1470083077989</updated>
     </task>
     <task id="LOCAL-00038" summary="set xgboost nthreads to .5 total cpu count">
       <created>1470952586311</created>
       <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
       <updated>1470952586311</updated>
     </task>
     <task id="LOCAL-00039" summary="set xgboost nthreads to 4, increase grid search">
       <created>1470960480374</created>
       <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
       <updated>1470960480374</updated>
     </task>
     <task id="LOCAL-00040" summary="increase n_estimators range">
       <created>1471032241625</created>
       <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
       <updated>1471032241625</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="increase n_estimators range">
+      <created>1471032347214</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1471032347214</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fix xgbr compat">
+      <created>1498101668406</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1498101668406</updated>
+    </task>
+    <task id="LOCAL-00043" summary="increase n_estimators range">
+      <created>1498102306450</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1498102306450</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix xgbr compat">
+      <created>1498102427478</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1498102427478</updated>
+    </task>
+    <task id="LOCAL-00045" summary="xgbr tweaks">
+      <created>1498104669979</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1498104669979</updated>
+    </task>
+    <task id="LOCAL-00046" summary="xgbr compat -- import fix">
+      <created>1498105065654</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1498105065654</updated>
+    </task>
+    <task id="LOCAL-00047" summary="tweaking xgb param grid">
+      <created>1498106173543</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1498106173543</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1818" y="163" width="1440" height="831" extended-state="0" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16111112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09332638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328084" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719836" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -602,11 +768,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated README" />
-    <MESSAGE value="Fix argmax error in best model selection (out of bounds error as axis was passed)" />
-    <MESSAGE value="More bug fixes" />
-    <MESSAGE value="Print rmse while building ensembles and modify ensemble_predict to handle regression." />
-    <MESSAGE value="Create train and predict (main-esque) functions.  This way one can build up a structure of sorts and execute the functions from within other scripts while still allowing execution from command line (maintaining arg parsing)" />
     <MESSAGE value="Add argument (-removal) to remove models not used in ensemble (and vacuum sqlite file) to save space." />
     <MESSAGE value="Handle exceptions in db_cleanup execution." />
     <MESSAGE value="Typo in db_cleanup" />
@@ -627,7 +788,12 @@
     <MESSAGE value="set xgboost nthreads to .5 total cpu count" />
     <MESSAGE value="set xgboost nthreads to 4, increase grid search" />
     <MESSAGE value="increase n_estimators range" />
-    <option name="LAST_COMMIT_MESSAGE" value="increase n_estimators range" />
+    <MESSAGE value="fit xgb compat" />
+    <MESSAGE value="fix xgbr compat" />
+    <MESSAGE value="xgbr tweaks" />
+    <MESSAGE value="xgbr compat -- import fix" />
+    <MESSAGE value="tweaking xgb param grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaking xgb param grid" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -640,7 +806,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/ensemble_train.py</url>
-          <line>88</line>
+          <line>90</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -651,8 +817,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="198" column="46" selection-start-line="198" selection-start-column="45" selection-end-line="198" selection-end-column="46" />
+        <state relative-caret-position="0">
+          <caret line="198" column="46" lean-forward="false" selection-start-line="198" selection-start-column="45" selection-end-line="198" selection-end-column="46" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -661,8 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -671,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -681,8 +847,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -691,25 +857,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -718,8 +944,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="263" column="44" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="263" column="44" lean-forward="false" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -728,8 +954,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -738,25 +964,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -765,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -775,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -785,25 +1071,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -812,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -822,8 +1168,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -832,25 +1178,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="941" column="50" selection-start-line="941" selection-start-column="50" selection-end-line="941" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="941" column="50" lean-forward="false" selection-start-line="941" selection-start-column="50" selection-end-line="941" selection-end-column="50" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -859,8 +1265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -869,8 +1275,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -879,25 +1285,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -906,8 +1372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="223" column="11" selection-start-line="223" selection-start-column="3" selection-end-line="223" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="223" column="11" lean-forward="false" selection-start-line="223" selection-start-column="3" selection-end-line="223" selection-end-column="14" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -916,8 +1382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="230" column="7" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="230" column="7" lean-forward="false" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="7" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -926,25 +1392,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="977" column="18" selection-start-line="977" selection-start-column="16" selection-end-line="977" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="977" column="18" lean-forward="false" selection-start-line="977" selection-start-column="16" selection-end-line="977" selection-end-column="18" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -953,8 +1479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -963,8 +1489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="0">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -973,25 +1499,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="806" column="0" lean-forward="false" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -1000,8 +1586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="2" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="39" />
+        <state relative-caret-position="0">
+          <caret line="92" column="2" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="39" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -1010,8 +1596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="0">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -1020,25 +1606,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="806" column="0" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="806" column="0" lean-forward="false" selection-start-line="806" selection-start-column="0" selection-end-line="806" selection-end-column="0" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -1047,8 +1693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="2" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="39" />
+        <state relative-caret-position="0">
+          <caret line="92" column="2" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="92" selection-end-column="39" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -1057,8 +1703,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="58" selection-start-line="120" selection-start-column="58" selection-end-line="120" selection-end-column="58" />
+        <state relative-caret-position="0">
+          <caret line="120" column="58" lean-forward="false" selection-start-line="120" selection-start-column="58" selection-end-line="120" selection-end-column="58" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
           </folding>
@@ -1067,18 +1713,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="667" column="24" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="667" column="24" lean-forward="false" selection-start-line="667" selection-start-column="8" selection-end-line="667" selection-end-column="24" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#3365#3402#0" expanded="true" />
           </folding>
@@ -1087,25 +1793,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01659292">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensemble_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="59" selection-start-line="123" selection-start-column="57" selection-end-line="123" selection-end-column="59" />
-          <folding>
-            <element signature="e#3365#3402#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2535">
+          <caret line="169" column="39" lean-forward="false" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="14" />
+        <state relative-caret-position="1245">
+          <caret line="91" column="28" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
           <folding>
             <element signature="e#1099#1136#0" expanded="true" />
           </folding>
@@ -1114,20 +1811,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2501">
+          <caret line="1363" column="8" lean-forward="false" selection-start-line="1363" selection-start-column="8" selection-end-line="1363" selection-end-column="8" />
           <folding>
             <element signature="e#706#715#0" expanded="true" />
+            <element signature="e#3643#24676#0" expanded="false" />
+            <marker date="1498166244000" expanded="true" signature="3128:3233" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3192:3232" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3275:3378" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3337:3377" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="3407:3498" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="3457:3497" ph="select disti... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="8601:8737" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="8752:8937" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="8952:9140" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="9155:9289" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="9596:9621" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="9885:9973" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="10178:10225" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="10391:10418" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="10496:10534" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="10686:10724" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="11504:11556" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="11583:11714" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="12719:12812" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="13152:13242" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="13272:13398" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="13478:13517" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="13541:13565" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="14696:14777" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="15092:15205" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="15838:15939" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="18991:19294" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="19135:19293" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="20887:21032" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="22303:22356" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="23117:23243" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="29713:29849" ph="create table... models" />
+            <marker date="1498166244000" expanded="true" signature="29864:30049" ph="create table... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="30064:30252" ph="create table... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="30267:30401" ph="create table... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="30708:30733" ph="pragma journ... " />
+            <marker date="1498166244000" expanded="true" signature="30996:31084" ph="insert into models... " />
+            <marker date="1498166244000" expanded="true" signature="31289:31336" ph="create index... models_index" />
+            <marker date="1498166244000" expanded="true" signature="31502:31529" ph="select count... models" />
+            <marker date="1498166244000" expanded="true" signature="31607:31645" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="32640:32692" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="32719:32850" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="34152:34245" ph="create index... fitted_models_index" />
+            <marker date="1498166244000" expanded="true" signature="34585:34675" ph="insert into model_scores... " />
+            <marker date="1498166244000" expanded="true" signature="34705:34831" ph="select pickl... fitted_models" />
+            <marker date="1498166244000" expanded="true" signature="34911:34950" ph="drop index i... " />
+            <marker date="1498166244000" expanded="true" signature="34974:34998" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="36143:36224" ph="create index... model_scores_index" />
+            <marker date="1498166244000" expanded="true" signature="36543:36656" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="37305:37406" ph="select probs... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="38163:38215" ph="select pickl... models" />
+            <marker date="1498166244000" expanded="true" signature="38242:38287" ph="delete from " />
+            <marker date="1498166244000" expanded="true" signature="38316:38447" ph="insert into fitted_models... " />
+            <marker date="1498166244000" expanded="true" signature="38477:38528" ph="select model... ensemble" />
+            <marker date="1498166244000" expanded="true" signature="42546:42849" ph="select model... models" />
+            <marker date="1498166244000" expanded="true" signature="42690:42848" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="44258:44403" ph="select model... model_scores" />
+            <marker date="1498166244000" expanded="true" signature="45676:45729" ph="insert into ensemble... " />
+            <marker date="1498166244000" expanded="true" signature="46486:46612" ph="select pickl... fitted_models" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5514706">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        <state relative-caret-position="237">
+          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
           <folding>
             <element signature="e#164#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensemble_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="329" column="0" lean-forward="true" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+          <folding>
+            <element signature="e#3365#3402#0" expanded="true" />
           </folding>
         </state>
       </provider>

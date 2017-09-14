@@ -24,7 +24,7 @@ import sys
 import sqlite3
 import numpy as np
 from math import sqrt
-from cPickle import loads, dumps
+from cPickle import loads, dumps  # joblib
 from collections import Counter
 
 from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
